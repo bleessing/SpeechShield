@@ -1,0 +1,17 @@
+# Разрешаем всем поисковым роботам индексировать весь сайт
+User-agent: *
+Allow: /
+
+# Запрещаем индексировать API (оно не нужно в поиске)
+Disallow: /api/
+
+# Указываем где находится карта сайта
+Sitemap: https://speechshield.ru/sitemap.xml
+
+# Специальные правила для Яндекса
+User-agent: Yandex
+Allow: /
+
+# Специальные правила для Google
+User-agent: Googlebot
+Allow: /
