@@ -1,0 +1,222 @@
+.container {
+    margin-top: 80px;
+    background: linear-gradient(103.58deg, #E7E5FE -25.19%, #7249E1 133.63%);
+    width: 100%;
+    border-radius: 40px;
+    min-height: 677px;
+    position: relative;
+}
+
+.wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    min-height: 677px;
+    padding: 0 60px;
+    position: relative;
+}
+
+.container_left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    z-index: 2;
+}
+
+.container_right {
+    position: absolute;
+    right: 60px;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.banner_image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+.banner_title {
+    font-family: "Jura", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    max-width: 840px;
+    text-align: left;
+    line-height: 52px;
+    margin: 0;
+}
+
+.banner_title strong {
+    color: rgba(114, 73, 225, 1);
+}
+
+.banner_description {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(69, 59, 108, 1);
+    line-height: 130%;
+    max-width: 504px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button_download {
+    background: linear-gradient(97.99deg, #7C56E3 12.72%, #42209E 100%);
+    color: rgba(245, 242, 245, 1);
+    border-radius: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button_download:hover {
+    background: linear-gradient(97.99deg, #906AF7 12.72%, #4C2AA8 100%);
+}
+
+/* Планшеты (средние) - 1024px */
+@media (max-width: 1024px) {
+    .container {
+        min-height: 600px;
+        border-radius: 30px;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+        min-height: 600px;
+    }
+
+    .container_left {
+        padding-top: 60px;
+        max-width: 500px;
+    }
+
+    .banner_title {
+        font-size: 40px;
+        line-height: 44px;
+        max-width: 500px;
+    }
+
+    .banner_description {
+        font-size: 16px;
+        max-width: 450px;
+    }
+
+    .container_right {
+        right: 40px;
+    }
+
+    .banner_image {
+        max-width: 400px;
+    }
+}
+
+/* Планшеты (маленькие) - 768px */
+@media (max-width: 768px) {
+    .container {
+        background: none;
+        min-height: auto;
+    }
+
+    .wrapper {
+        padding: 0 30px;
+        min-height: auto;
+        flex-direction: column;
+    }
+
+    .container_left {
+        padding: 40px 0;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner_title {
+        font-size: 32px;
+        line-height: 38px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .banner_description {
+        font-size: 16px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container_right {
+        display: none;
+    }
+}
+
+/* Мобильные (большие) - 480px */
+@media (max-width: 480px) {
+    .container_left {
+        padding: 30px 16px;
+        text-align: center;
+    }
+
+    .banner_title {
+        font-size: 28px;
+        line-height: 28px;
+        text-align: start;
+        font-weight: 600;
+    }
+
+    .banner_description {
+        text-align: start;
+        font-size: 15px;
+        margin: 12px 0;
+        font-weight: 400;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button_download {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Мобильные (маленькие) - 360px */
+@media (max-width: 360px) {
+    .container_left {
+        padding: 20px 16px;
+    }
+
+    .banner_title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .banner_description {
+        font-size: 13px;
+        margin: 12px 0;
+    }
+
+    .button_download {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+}

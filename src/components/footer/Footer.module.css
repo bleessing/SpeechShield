@@ -1,0 +1,90 @@
+.wrapper{
+    margin-left: calc(-50vw + 50%);
+    width: 100vw;
+    background-image: url('../../assets/fBG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(87, 51, 182, 1);
+}
+
+.container{
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 35px 40px;
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+
+}
+.additional{
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    line-height: 130%;
+    font-weight: 400;
+}
+.menu_list{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.list_item{
+    font-family: "Jura", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(245, 242, 245, 1);
+
+}
+.card{
+    margin-top: 25px;
+    padding: 16px;
+    border: 1px solid rgba(231, 229, 254, 1);
+    border-radius: 20px;
+}
+
+/* Мобильные - 360px */
+@media (max-width: 480px) {
+    .wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align:start;
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    .leftSide {
+        align-items: center;
+        gap: 24px;
+    }
+
+    .menu_list {
+        flex-direction: column;
+        gap: 16px;
+
+    }
+
+    .list_item {
+        font-size: 16px;
+    }
+
+    .additional {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .card {
+        margin-top: 16px;
+        padding: 12px;
+        border-radius: 16px;
+    }
+}

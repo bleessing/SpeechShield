@@ -1,0 +1,213 @@
+.container {
+    background-image: url("../../assets/Vector BG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    min-height: 440px;
+
+}
+
+.container_inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.container_title {
+    font-family: "Jura", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    text-align: left;
+    margin-bottom: 40px;
+
+}
+
+.container_title strong {
+    color: rgba(114, 73, 225, 1);
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+.card:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.card {
+    max-height: 223px;
+    max-width: 670px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    background: #F5F2F5;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+
+
+}
+
+.card[data-variant = "red"] {
+    border: 1px solid rgba(241, 40, 29, 1);
+    background: linear-gradient(120deg, rgba(254, 229, 229, 1) 50%, rgba(241, 40, 29, 1) 150%);
+}
+
+.card[data-variant = "green"] {
+    background: linear-gradient(120deg, rgba(229, 254, 247, 1) 50%, rgba(8, 211, 89, 1) 150%);
+    border: 1px solid rgba(8, 211, 89, 1);
+
+}
+
+.card_title {
+    font-family: "Jura", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 420px;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 0px 0;
+}
+
+.card_description {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(69, 59, 108, 1);
+    padding-right: 200px;
+    margin: 0;
+}
+
+.card_description strong {
+    color: rgba(114, 73, 225, 1)
+}
+
+.card_image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.card_label1 {
+    height: 40px;
+    width: 123px;
+    background: red;
+    border-radius: 333px;
+    position: absolute;
+    right: 160px;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label1_text {
+    padding:  10px 20px;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    font-weight: 600;
+}
+.card_label2{
+    height: 40px;
+    width: 123px;
+    background: red;
+    border-radius: 333px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -15px;
+    bottom: 150px;
+}
+.card_label2[data-variant = "green"],
+.card_label1[data-variant = "green"] {
+    background: #08D359
+}
+.card_label2[data-variant = "red"],
+.card_label1[data-variant = "red"] {
+    background: #F1281D
+}
+
+.label2_text {
+    padding:  10px 20px;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    font-weight: 600;
+}
+
+/* Мобильные - 360px */
+@media (max-width: 480px) {
+    .container {
+        min-height: auto;
+        padding: 0 16px;
+    }
+
+    .container_inner {
+        padding: 20px 0;
+    }
+
+    .container_title {
+        font-size: 24px;
+        text-align: start   ;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .card {
+        max-width: 100%;
+        max-height: none;
+        padding: 20px;
+        border-radius: 20px;
+        font-family: "Jura", "sans-serif" ;
+    }
+
+    .card_title {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .card_description {
+        font-size: 14px;
+        padding-right: 0;
+        margin-bottom: 100px;
+    }
+
+    .card_image {
+        width: 160px;
+        height: 120px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .card_label1,
+    .card_label2 {
+        width: 90px;
+        height: 30px;
+    }
+
+    .label1_text,
+    .label2_text {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .card_label1 {
+        right: 100px;
+        bottom: 10px;
+    }
+
+    .card_label2 {
+        right: -10px;
+        bottom: 100px;
+    }
+}

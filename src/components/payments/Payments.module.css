@@ -1,0 +1,210 @@
+.wrapper{
+    background-image: url('../../assets/Vector BG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+
+}
+
+.container{
+    width: 100%;
+    max-width: 1360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_parent{
+    width: 520px;
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-out;
+    cursor: pointer;
+}
+
+.card_wrapper{
+    width: 480px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 242, 245, 1);
+    z-index: 2;
+    transition: transform 0.4s ease-out;
+}
+
+.card{
+    width: 440px;
+    height: 580px;
+    background-color: rgba(245, 242, 245, 1);
+    z-index: 3;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.4s ease-out;
+}
+
+.card_parent:hover {
+    transform: translate(-8px, -8px);
+}
+
+.card_parent:hover .card_wrapper {
+    transform: translate(4px, 4px);
+}
+
+.card_parent:hover .card {
+    transform: translate(4px, 4px);
+}
+.card, .card_wrapper, .card_parent{
+    border: 1px solid rgba(114, 73, 225, 1);
+    border-radius: 40px;
+}
+.card_title{
+    font-family: "Jura", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+
+}
+.card_img{
+    width: 165px;
+    height: 180px;
+}
+.newPrice{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 400;
+    color: rgba(69, 59, 108, 1)
+}
+.prevPrice{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 400;
+    color: rgba(162, 151, 203, 1);
+    text-decoration:line-through;
+}
+.title {
+    font-family: "Jura", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    margin-bottom: 80px;
+}
+.button{
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: linear-gradient(125deg,rgba(124, 86, 227, 1) 30%, rgba(66, 32, 158, 1) 180%);
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+.list_title{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(69, 59, 108, 1);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.list_item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px
+}
+.list_item p {
+    color: rgba(69, 59, 108, 1);
+}
+
+/* Мобильные - 360px */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 20px 16px 40px;
+    }
+
+
+    .container {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .card_parent {
+        width: 360px;
+        height: 400px;
+    }
+
+    .card_wrapper {
+        width: 340px;
+        height: 432px;
+    }
+
+    .card {
+        width: 320px;
+        height: 462px;
+        margin-bottom: 20px;
+    }
+
+    .card, .card_wrapper, .card_parent {
+        border-radius: 24px;
+    }
+
+    .card_title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .card_img {
+        width: 96px;
+        height: 105px;
+    }
+
+    .newPrice {
+        font-size: 20px;
+    }
+
+    .prevPrice {
+        font-size: 14px;
+    }
+
+    .button {
+        margin-top: 24px;
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .card_parent:hover,
+    .card_parent:hover .card_wrapper,
+    .card_parent:hover .card {
+        transform: none;
+    }
+}
