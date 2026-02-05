@@ -8,6 +8,7 @@
     padding-bottom: 70px;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+    scroll-margin-top: 70px;
 }
 
 .container{
@@ -81,14 +82,14 @@
 }
 .newPrice{
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 130%;
     font-weight: 400;
     color: rgba(69, 59, 108, 1)
 }
 .prevPrice{
     font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 130%;
     font-weight: 400;
     color: rgba(162, 151, 203, 1);
@@ -101,23 +102,28 @@
     color: rgba(69, 59, 108, 1);
     margin-bottom: 80px;
 }
-.button{
-    margin-top: 15px;
-    padding: 12px 20px;
-    border-radius: 50px;
-    background: linear-gradient(125deg,rgba(124, 86, 227, 1) 30%, rgba(66, 32, 158, 1) 180%);
-    display: inline-block;
-    text-align: center;
+.button {
+    background: linear-gradient(135deg, rgba(69, 59, 108, 1), rgba(100, 85, 150, 1));
     color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
     font-family: "Inter", sans-serif;
-    font-weight: 500;
-    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 254px;
+    margin-top: 15px;
 }
 
 .button:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(69, 59, 108, 0.3);
+}
+
+.button:active {
+    transform: translateY(0);
 }
 .list_title{
     font-family: "Inter", sans-serif;
@@ -136,7 +142,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 8px
+    gap: 8px;
+    font-size: 15px;
 }
 .list_item p {
     color: rgba(69, 59, 108, 1);
@@ -179,7 +186,7 @@
     }
 
     .card_title {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -198,7 +205,7 @@
 
     .button {
         margin-top: 24px;
-        width: 100%;
+        width: 254px;
         padding: 14px 20px;
         font-size: 14px;
     }

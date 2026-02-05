@@ -23,7 +23,9 @@ const Header = () => {
     return (
         <>
             <div className={styles.header}>
-                    <img className={styles.logo} src={logo} alt="SpeechShield" />
+                    <a href="#" className={styles.logo_link}>
+                        <img className={styles.logo} src={logo} alt="SpeechShield" />
+                    </a>
 
                 <ul className={styles.menu_list}>
                     {items.map((item) => (
@@ -42,9 +44,9 @@ const Header = () => {
             {/* Мобильное меню */}
             <div className={`${styles.mobile_menu} ${isMenuOpen ? styles.mobile_menu_open : ''}`}>
                 <div className={styles.mobile_header}>
-                    <div className={styles.logo}>
-                        <img src={logo} alt="SpeechShield" />
-                    </div>
+                    <a href="#" className={styles.logo_link} onClick={closeMenu}>
+                        <img className={styles.logo} src={logo} alt="SpeechShield" />
+                    </a>
                     <button className={styles.close_btn} onClick={closeMenu} aria-label="Закрыть">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>

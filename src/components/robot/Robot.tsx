@@ -1,9 +1,9 @@
-import micro from '../../assets/icons/micro.png'
-import censure from '../../assets/icons/censure.png';
-import graphic from '../../assets/icons/graphic.png';
-import incognito from '../../assets/icons/incognito.png';
-import language from '../../assets/icons/language.png';
-import blackList from '../../assets/icons/black_list.png'
+import micro from '../../assets/svg_icons/micro.svg'
+import censure from '../../assets/svg_icons/censure.svg';
+import graphic from '../../assets/svg_icons/graphic.svg';
+import incognito from '../../assets/svg_icons/incognito.svg';
+import language from '../../assets/svg_icons/language.svg';
+import blackList from '../../assets/svg_icons/support.svg'
 
 import styles from './Robot.module.css'
 import robot from '../../assets/robot.png';
@@ -44,8 +44,8 @@ const Robot = () => {
         },
     ]
     return (
-        <div id="robot">
-            <div className={styles.container}>
+
+            <div className={styles.container} id={'robot'}>
                 <h1 className={styles.title}>
                     <strong>
                         Почему SpeechShield
@@ -78,7 +78,6 @@ const Robot = () => {
                 </div>
             </div>
 
-        </div>
     );
 };
 

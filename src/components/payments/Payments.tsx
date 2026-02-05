@@ -1,6 +1,6 @@
 import styles from './Payments.module.css'
-import gift from '../../assets/gift.png'
-import ok from '../../assets/icons/ok.png';
+import gift from '../../assets/gift.svg'
+import ok from '../../assets/icons/Group.svg';
 const Payments = () => {
     const list = [{
         id:1,
@@ -42,13 +42,17 @@ const Payments = () => {
 
                             <p className={styles.newPrice}>499 ₽ / месяц</p>
                             <p className={styles.prevPrice}>799 ₽ / месяц</p>
-                            <a
-                                href="https://speechshield.ru/api/downloads/file"
+                            <button
                                 className={styles.button}
-                                download
+                                onClick={() => {
+                                    const link = document.createElement('a');
+                                    link.href = 'https://speechshield.ru/api/downloads/file';
+                                    link.download = '';
+                                    link.click();
+                                }}
                             >
                                 Попробовать бесплатно
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>

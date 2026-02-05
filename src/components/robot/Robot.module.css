@@ -1,5 +1,7 @@
-
-.title{
+.container {
+    scroll-margin-top: 70px;
+}
+.title {
     font-family: "Jura", sans-serif;
     font-size: 44px;
     font-weight: 600;
@@ -7,11 +9,12 @@
     text-align: right;
     margin-bottom: 40px;
 }
+
 .title strong {
     color: rgba(114, 73, 225, 1);
 }
 
-.section_left{
+.section_left {
 
     width: 678px;
     height: 800px;
@@ -19,26 +22,31 @@
     position: relative;
 
 }
-.section_img{
+
+.section_img {
     position: absolute;
     top: -30px;
 }
-.section_wrapper{
+
+.section_wrapper {
     background: rgba(114, 73, 225, 1);
-    background: linear-gradient(120deg,rgba(162, 158, 230, 1) 0%, rgba(114, 73, 225, 1) 100%);
+    background: linear-gradient(120deg, rgba(162, 158, 230, 1) 0%, rgba(114, 73, 225, 1) 100%);
     border-radius: 40px;
 }
-.sections{
+
+.sections {
     display: flex;
     justify-content: center;
-    gap: 20px ;
+    gap: 20px;
 }
-.cards_list{
+
+.cards_list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.card_item{
+
+.card_item {
     padding: 30px;
     border: 1px solid rgba(114, 73, 225, 1);
     display: flex;
@@ -74,17 +82,20 @@
     position: relative;
     z-index: 1;
 }
-.card_img{
+
+.card_img {
     height: 34px;
     width: 34px;
     padding: 5px;
     background-color: #E3DCF3;
     border-radius: 8px;
 }
-.card_title{
+
+.card_title {
+    font-size: 28px;
     font-family: "Jura", sans-serif;
     font-weight: 600;
-color: rgba(69, 59, 108, 1);
+    color: rgba(69, 59, 108, 1);
 }
 
 .card_short {
@@ -174,12 +185,12 @@ color: rgba(69, 59, 108, 1);
     }
 
     .card_title {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 4px;
     }
 
     .card_short {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.3;
     }
 }
