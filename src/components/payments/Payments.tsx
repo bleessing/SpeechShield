@@ -14,6 +14,7 @@ interface Plan {
     price: number;
     period: string;
     annualPrice?: number;
+    description?: string;
     features: Feature[];
     badge?: string;
     isPopular?: boolean;
@@ -28,14 +29,15 @@ const Payments = () => {
             name: "Free",
             price: 0,
             period: "20 часов / месяц",
+            description: "Попробовать перед покупкой",
             features: [
-                { id: 1, text: "Фильтрация микрофона", available: true },
-                { id: 2, text: "Интеграция с OBS", available: true },
-                { id: 3, text: "Весь звук ПК", available: false },
-                { id: 4, text: "Обработка записей", available: false },
-                { id: 5, text: "Аналитика", available: false },
+                { id: 1, text: "Защита голоса в реальном времени", available: true },
+                { id: 2, text: "Работа с OBS Studio", available: true },
+                { id: 3, text: "Фильтрация Discord и игр", available: false },
+                { id: 4, text: "Очистка готовых видео", available: false },
+                { id: 5, text: "Статистика срабатываний", available: false },
             ],
-            buttonText: "Начать бесплатно",
+            buttonText: "Скачать бесплатно",
             buttonAction: () => {
                 const link = document.createElement('a');
                 link.href = 'https://speechshield.ru/api/downloads/file';
@@ -51,12 +53,13 @@ const Payments = () => {
             annualPrice: 2390,
             isPopular: true,
             badge: "Популярный",
+            description: "Для активных стримеров",
             features: [
-                { id: 1, text: "Фильтрация микрофона", available: true },
-                { id: 2, text: "Интеграция с OBS", available: true },
-                { id: 3, text: "Весь звук ПК", available: true },
-                { id: 4, text: "Обработка записей (3/мес)", available: true },
-                { id: 5, text: "Базовая аналитика", available: true },
+                { id: 1, text: "Защита голоса в реальном времени", available: true },
+                { id: 2, text: "Работа с OBS Studio", available: true },
+                { id: 3, text: "Фильтрация Discord и игр", available: true },
+                { id: 4, text: "Очистка видео (до 3 в месяц)", available: true },
+                { id: 5, text: "Статистика срабатываний", available: true },
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
@@ -70,12 +73,13 @@ const Payments = () => {
             period: "месяц",
             annualPrice: 3990,
             badge: "Максимум",
+            description: "Для профессионалов и студий",
             features: [
-                { id: 1, text: "Всё из Стандарт", available: true },
-                { id: 2, text: "Безлимит записей", available: true },
-                { id: 3, text: "Расширенная аналитика", available: true },
-                { id: 4, text: "Приоритетная поддержка", available: true },
-                { id: 5, text: "Ранний доступ к функциям", available: true },
+                { id: 1, text: "Всё из тарифа Стандарт", available: true },
+                { id: 2, text: "Безлимитная очистка видео", available: true },
+                { id: 3, text: "Детальные отчёты и графики", available: true },
+                { id: 4, text: "Приоритетная поддержка 24/7", available: true },
+                { id: 5, text: "Ранний доступ к новинкам", available: true },
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
@@ -101,6 +105,9 @@ const Payments = () => {
                             )}
 
                             <h3 className={styles.card_title}>{plan.name}</h3>
+                            {plan.description && (
+                                <p className={styles.card_description}>{plan.description}</p>
+                            )}
 
                             <div className={styles.price_container}>
                                 {plan.price === 0 ? (

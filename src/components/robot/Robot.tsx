@@ -3,7 +3,7 @@ import censure from '../../assets/svg_icons/censure.svg';
 import graphic from '../../assets/svg_icons/graphic.svg';
 import incognito from '../../assets/svg_icons/incognito.svg';
 import language from '../../assets/svg_icons/language.svg';
-import blackList from '../../assets/svg_icons/support.svg'
+import speaker from '../../assets/svg_icons/speaker.svg'
 
 import styles from './Robot.module.css'
 import robot from '../../assets/robot.png';
@@ -23,14 +23,14 @@ const Robot = () => {
             img: micro
         },  {
             id: 3,
-            title: "Автоматическая цензура",
-            short: "Не нужно нажимать кнопки и отвлекаться",
+            title: "Обработка записей",
+            short: "Очистите готовые видео от ненормативной лексики",
             img: censure
         },  {
             id: 4,
-            title: "Кастомизация",
-            short: "Добавьте свои слова в черный список",
-            img: blackList
+            title: "Весь звук ПК",
+            short: "Фильтрация Discord, игр и музыки",
+            img: speaker
         },  {
             id: 5,
             title: "Статистика",

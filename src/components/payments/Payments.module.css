@@ -90,8 +90,15 @@
     font-size: 28px;
     font-weight: 600;
     color: rgba(69, 59, 108, 1);
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     margin-top: 8px;
+}
+
+.card_description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 16px;
 }
 
 .price_container {
