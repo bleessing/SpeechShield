@@ -1,218 +1,289 @@
-.wrapper{
+.wrapper {
     background-image: url('../../assets/Vector BG.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
+    padding: 80px 20px;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     scroll-margin-top: 70px;
 }
 
-.container{
+.container {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.card_parent{
-    width: 520px;
-    height: 510px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.4s ease-out;
-    cursor: pointer;
-}
-
-.card_wrapper{
-    width: 480px;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(245, 242, 245, 1);
-    z-index: 2;
-    transition: transform 0.4s ease-out;
-}
-
-.card{
-    width: 440px;
-    height: 580px;
-    background-color: rgba(245, 242, 245, 1);
-    z-index: 3;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: transform 0.4s ease-out;
-}
-
-.card_parent:hover {
-    transform: translate(-8px, -8px);
-}
-
-.card_parent:hover .card_wrapper {
-    transform: translate(4px, 4px);
-}
-
-.card_parent:hover .card {
-    transform: translate(4px, 4px);
-}
-.card, .card_wrapper, .card_parent{
-    border: 1px solid rgba(114, 73, 225, 1);
-    border-radius: 40px;
-}
-.card_title{
-    font-family: "Jura", sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: rgba(69, 59, 108, 1);
-
-}
-.card_img{
-    width: 165px;
-    height: 180px;
-}
-.newPrice{
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    line-height: 130%;
-    font-weight: 400;
-    color: rgba(69, 59, 108, 1)
-}
-.prevPrice{
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    line-height: 130%;
-    font-weight: 400;
-    color: rgba(162, 151, 203, 1);
-    text-decoration:line-through;
-}
 .title {
     font-family: "Jura", sans-serif;
     font-size: 44px;
     font-weight: 600;
     color: rgba(69, 59, 108, 1);
-    margin-bottom: 80px;
+    margin-bottom: 16px;
+    text-align: center;
 }
-.button {
-    background: linear-gradient(135deg, rgba(69, 59, 108, 1), rgba(100, 85, 150, 1));
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 20px;
+
+.subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.cards_container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 340px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 24px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(69, 59, 108, 0.15);
+}
+
+.card_popular {
+    border: 2px solid rgba(114, 73, 225, 1);
+    transform: scale(1.05);
+}
+
+.card_popular:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    background: linear-gradient(135deg, rgba(114, 73, 225, 1), rgba(150, 100, 220, 1));
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card_title {
+    font-family: "Jura", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.price_container {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-family: "Jura", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+}
+
+.price_free {
+    font-family: "Jura", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+}
+
+.price_period {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: rgba(100, 85, 150, 1);
+}
+
+.annual_price {
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 8px;
+}
+
+.save_badge {
+    background: rgba(76, 175, 80, 0.15);
+    color: rgba(76, 175, 80, 1);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.limit_text {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 8px;
+}
+
+.features_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.feature_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: rgba(69, 59, 108, 1);
+}
+
+.feature_disabled {
+    color: rgba(162, 151, 203, 1);
+}
+
+.icon_ok {
+    width: 20px;
+    height: 20px;
+}
+
+.icon_close {
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+}
+
+.button {
+    width: 100%;
+    background: rgba(245, 242, 250, 1);
+    color: rgba(69, 59, 108, 1);
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 50px;
+    padding: 14px 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 254px;
-    margin-top: 15px;
+    transition: all 0.2s ease;
+    margin-top: auto;
 }
 
 .button:hover {
+    background: rgba(235, 230, 245, 1);
     transform: translateY(-2px);
+}
+
+.button_primary {
+    background: linear-gradient(135deg, rgba(69, 59, 108, 1), rgba(100, 85, 150, 1));
+    color: white;
+    border: none;
+}
+
+.button_primary:hover {
     box-shadow: 0 8px 20px rgba(69, 59, 108, 0.3);
+    background: linear-gradient(135deg, rgba(80, 70, 120, 1), rgba(110, 95, 160, 1));
 }
 
-.button:active {
-    transform: translateY(0);
-}
-.list_title{
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: rgba(69, 59, 108, 1);
-    text-align: center;
-    margin-bottom: 15px;
-}
-.list{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-.list_item{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
-}
-.list_item p {
-    color: rgba(69, 59, 108, 1);
-}
-
-/* Мобильные - 360px */
-@media (max-width: 480px) {
-    .wrapper {
-        padding: 20px 16px 40px;
-    }
-
-
-    .container {
-        padding: 0;
-    }
-
-    .title {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .card_parent {
-        width: 360px;
-        height: 400px;
-    }
-
-    .card_wrapper {
-        width: 340px;
-        height: 432px;
+/* Tablet */
+@media (max-width: 1100px) {
+    .cards_container {
+        gap: 20px;
     }
 
     .card {
-        width: 320px;
-        height: 462px;
-        margin-bottom: 20px;
+        width: 300px;
+        padding: 28px 24px;
     }
 
-    .card, .card_wrapper, .card_parent {
-        border-radius: 24px;
+    .card_popular {
+        transform: scale(1.02);
+    }
+
+    .card_popular:hover {
+        transform: scale(1.02) translateY(-8px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 60px 16px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .cards_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .card_popular {
+        transform: none;
+    }
+
+    .card_popular:hover {
+        transform: translateY(-8px);
     }
 
     .card_title {
-        font-size: 20px;
-        text-align: center;
+        font-size: 24px;
     }
 
-    .card_img {
-        width: 96px;
-        height: 105px;
+    .price {
+        font-size: 36px;
     }
 
-    .newPrice {
-        font-size: 20px;
+    .price_free {
+        font-size: 32px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .card {
+        padding: 24px 20px;
     }
 
-    .prevPrice {
+    .feature_item {
         font-size: 14px;
-    }
-
-    .button {
-        margin-top: 24px;
-        width: 254px;
-        padding: 14px 20px;
-        font-size: 14px;
-    }
-
-    .card_parent:hover,
-    .card_parent:hover .card_wrapper,
-    .card_parent:hover .card {
-        transform: none;
     }
 }
