@@ -13,7 +13,7 @@ const Advise = () => {
                     <div className={styles.cards}>
                         <div className={styles.card} data-variant={'red'}>
                             <h2 className={styles.card_title}>Проблема</h2>
-                            <p className={styles.card_description}>Одина случайная запретка в&nbsp;прямом эфире стоит вам монетизации, партнёрств и&nbsp;репутации. Ловить каждое слово невозможно, а&nbsp;стримкилеры постоянно норовят вас уловить.</p>
+                            <p className={styles.card_description}>Одна случайная запретка в&nbsp;прямом эфире стоит вам монетизации, партнёрств и&nbsp;репутации. Ловить каждое слово невозможно, а&nbsp;стримкилеры постоянно норовят вас уловить.</p>
                             <img className={styles.card_image} src={card1}/>
                             <div className={styles.card_label1} data-variant={'red'}>
                                 <p className={styles.label1_text}>*#@!$%&</p>
@@ -27,7 +27,7 @@ const Advise = () => {
                             <h2 className={styles.card_title}>Решение</h2>
                             <p className={styles.card_description}>
                                 <strong>SpeechShield </strong>
-                                SpeechShield автоматически обнаруживает и&nbsp;заглушает ненормативную лексику в&nbsp;реальном времени. Стримьте спокойно&nbsp;&mdash; программа спасёт вас от&nbsp;запреток..</p>
+                                SpeechShield автоматически обнаруживает и&nbsp;заглушает ненормативную лексику в&nbsp;реальном времени. Стримьте спокойно&nbsp;&mdash; программа спасёт вас от&nbsp;запреток.</p>
                             <img className={styles.card_image} src={card2}/>
                             <div className={styles.card_label1} data-variant={'green'}>
                                 <p className={styles.label1_text}>*#@!$%&</p>
