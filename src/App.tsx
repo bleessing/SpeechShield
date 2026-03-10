@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './pages/home/Home.tsx';
 import Oferta from './pages/oferta/Oferta.tsx';
+import Privacy from './pages/privacy/Privacy.tsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/oferta" element={<Oferta />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </BrowserRouter>
   )

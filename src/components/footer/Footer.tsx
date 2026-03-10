@@ -29,6 +29,9 @@ const Footer = () => {
                                 <li className={styles.list_item}>
                                     <Link to="/oferta">Оферта</Link>
                                 </li>
+                                <li className={styles.list_item}>
+                                    <Link to="/privacy">Конфиденциальность</Link>
+                                </li>
                             </ul>
                             <button className={styles.button}
                                 onClick={() => {
@@ -60,6 +63,9 @@ const Footer = () => {
                             ))}
                             <li className={styles.list_item}>
                                 <Link to="/oferta">Оферта</Link>
+                            </li>
+                            <li className={styles.list_item}>
+                                <Link to="/privacy">Конфиденциальность</Link>
                             </li>
                         </ul>
                         <button className={styles.button}
