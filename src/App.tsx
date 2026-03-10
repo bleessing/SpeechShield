@@ -1,29 +1,27 @@
 
 import './App.css'
-import Banner from "./components/banner/Banner.tsx";
-import Advise from "./components/advise/Advise.tsx";
-import Robot from "./components/robot/Robot.tsx";
-import Feedback from "./components/feedback/Feedback.tsx";
-import Footer from "./components/footer/Footer.tsx";
-import HowItWorks from "./components/hiw/HowItWorks.tsx";
-import Payments from "./components/payments/Payments.tsx";
-// import Reviews from "./components/reviews/Reviews.tsx";
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Home from './pages/home/Home.tsx';
+import Oferta from './pages/oferta/Oferta.tsx';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
-
-
   return (
-    <div className='container'>
-            <Banner/>
-            <Advise/>
-            <Robot/>
-        <HowItWorks/>
-        <Payments/>
-        {/*<Reviews/> блок с отзывами выключен(раскомментируй блок)*/}
-            <Feedback/>
-            <Footer/>
-
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/oferta" element={<Oferta />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

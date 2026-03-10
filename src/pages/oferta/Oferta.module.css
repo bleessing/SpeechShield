@@ -1,0 +1,458 @@
+.page {
+    min-height: 100vh;
+    background: #f5f2f5;
+}
+
+/* Header */
+.header {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.homeLink {
+    font-family: "Jura", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(97.99deg, #7C56E3 12.72%, #42209E 100%);
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.homeLink:hover {
+    opacity: 0.85;
+}
+
+/* Main content */
+.content {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.badge {
+    display: inline-block;
+    font-family: "Jura", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(114, 73, 225, 1);
+    background: rgba(114, 73, 225, 0.1);
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: "Jura", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 12px;
+}
+
+.subtitle {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: rgba(100, 85, 150, 1);
+    margin: 0;
+}
+
+/* Table of contents */
+.toc {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 48px;
+}
+
+.tocTitle {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 20px;
+}
+
+.tocList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.tocItem {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+}
+
+.tocLink {
+    color: rgba(114, 73, 225, 1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.tocLink:hover {
+    color: rgba(69, 59, 108, 1);
+}
+
+.tocNumber {
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(114, 73, 225, 0.6);
+    min-width: 24px;
+}
+
+/* Sections */
+.section {
+    background: #fff;
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 24px;
+    padding: 36px;
+    margin-bottom: 24px;
+    scroll-margin-top: 100px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.sectionNumber {
+    font-family: "Jura", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(114, 73, 225, 0.3);
+    line-height: 1;
+    min-width: 48px;
+}
+
+.sectionTitle {
+    font-family: "Jura", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+    margin: 0;
+}
+
+.sectionText {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 12px;
+}
+
+.sectionText:last-child {
+    margin-bottom: 0;
+}
+
+/* Numbered list */
+.numberedList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+    counter-reset: item;
+}
+
+.numberedItem {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(69, 59, 108, 1);
+    padding: 4px 0 4px 32px;
+    position: relative;
+    counter-increment: item;
+}
+
+.numberedItem::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    color: rgba(114, 73, 225, 1);
+}
+
+/* Definitions table */
+.defTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 12px;
+}
+
+.defTable th,
+.defTable td {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(69, 59, 108, 1);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(114, 73, 225, 0.15);
+}
+
+.defTable th {
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(100, 85, 150, 1);
+    background: rgba(114, 73, 225, 0.05);
+}
+
+.defTable tr:last-child td {
+    border-bottom: none;
+}
+
+.defTerm {
+    font-weight: 600;
+    white-space: nowrap;
+    width: 200px;
+}
+
+/* Highlight box */
+.highlight {
+    background: rgba(114, 73, 225, 0.05);
+    border-left: 4px solid rgba(114, 73, 225, 1);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+}
+
+.highlight p {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(69, 59, 108, 1);
+}
+
+/* Contacts card */
+.contacts {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 24px;
+    padding: 36px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.contactsTitle {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 20px;
+}
+
+.contactsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    text-align: left;
+}
+
+.contactItem {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    color: rgba(69, 59, 108, 1);
+    line-height: 1.6;
+}
+
+.contactLabel {
+    font-size: 13px;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 4px;
+}
+
+.contactValue {
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 24px 40px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .content {
+        padding: 0 20px 40px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .tocList {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .sectionNumber {
+        font-size: 26px;
+        min-width: 36px;
+    }
+
+    .sectionTitle {
+        font-size: 20px;
+    }
+
+    .contactsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .defTerm {
+        white-space: normal;
+        width: auto;
+    }
+
+    .defTable th,
+    .defTable td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 14px 16px;
+    }
+
+    .logo {
+        height: 32px;
+    }
+
+    .homeLink {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+
+    .content {
+        padding: 0 16px 32px;
+    }
+
+    .hero {
+        margin-bottom: 32px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .toc {
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 32px;
+    }
+
+    .tocTitle {
+        font-size: 18px;
+    }
+
+    .tocItem {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 20px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+
+    .sectionHeader {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .sectionNumber {
+        font-size: 22px;
+        min-width: 30px;
+    }
+
+    .sectionTitle {
+        font-size: 18px;
+    }
+
+    .sectionText {
+        font-size: 14px;
+    }
+
+    .numberedItem {
+        font-size: 14px;
+        padding-left: 28px;
+    }
+
+    .highlight {
+        padding: 12px 16px;
+    }
+
+    .contacts {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .contactsTitle {
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 20px 16px;
+        font-size: 13px;
+    }
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logo from '../../assets/svg_icons/logo (2).svg'
 import fsi from '../../assets/svg_icons/image.svg';
@@ -9,7 +10,7 @@ const Footer = () => {
         { id: 1, title: "О нас", href: "#banner" },
         { id: 2, title: "Преимущества", href: "#robot" },
         { id: 3, title: "Тарифы", href: "#payments" },
-        { id: 4, title: "Поддержка", href: "#feedback" }
+        { id: 4, title: "Поддержка", href: "#feedback" },
     ];
     return (
         <div className={styles.wrapper}>
@@ -25,6 +26,9 @@ const Footer = () => {
                                         <a href={item.href}>{item.title}</a>
                                     </li>
                                 ))}
+                                <li className={styles.list_item}>
+                                    <Link to="/oferta">Оферта</Link>
+                                </li>
                             </ul>
                             <button className={styles.button}
                                 onClick={() => {
@@ -54,6 +58,9 @@ const Footer = () => {
                                     <a href={item.href}>{item.title}</a>
                                 </li>
                             ))}
+                            <li className={styles.list_item}>
+                                <Link to="/oferta">Оферта</Link>
+                            </li>
                         </ul>
                         <button className={styles.button}
                                 onClick={() => {

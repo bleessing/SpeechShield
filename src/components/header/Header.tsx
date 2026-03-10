@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 import logo from '../../assets/logo.svg'
 
@@ -33,6 +34,9 @@ const Header = () => {
                             <a href={item.href}>{item.title}</a>
                         </li>
                     ))}
+                    <li className={styles.list_item}>
+                        <Link to="/oferta">Оферта</Link>
+                    </li>
                 </ul>
                 <button className={styles.burger} onClick={toggleMenu} aria-label="Меню">
                     <span></span>
@@ -59,6 +63,9 @@ const Header = () => {
                             <a href={item.href}>{item.title}</a>
                         </li>
                     ))}
+                    <li className={styles.mobile_list_item} onClick={closeMenu}>
+                        <Link to="/oferta">Оферта</Link>
+                    </li>
                 </ul>
             </div>
         </>

@@ -40,7 +40,8 @@
     color: rgba(245, 242, 245, 1);
 }
 
-.list_item a {
+.list_item a,
+.list_item a:any-link {
     color: rgba(245, 242, 245, 1);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
