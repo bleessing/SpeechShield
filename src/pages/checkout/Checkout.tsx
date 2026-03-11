@@ -1,5 +1,5 @@
 import {useState, useMemo} from 'react';
-import {Link, useSearchParams} from 'react-router-dom';
+import {Link, useSearchParams, useNavigate} from 'react-router-dom';
 import styles from './Checkout.module.css';
 import ok from '../../assets/icons/Group.svg';
 import Header from "../../components/header/Header.tsx";
@@ -41,6 +41,7 @@ const Checkout = () => {
     const planKey = searchParams.get('plan') || 'standard';
     const plan = plans[planKey] || plans.standard;
 
+    const navigate = useNavigate();
     const [isAnnual, setIsAnnual] = useState(false);
     const [email, setEmail] = useState('');
     const [ofertaChecked, setOfertaChecked] = useState(false);
@@ -54,7 +55,7 @@ const Checkout = () => {
 
     const handleSubmit = () => {
         if (!isFormValid) return;
-        alert(`Оплата ${price} ₽ за тариф "${plan.name}" будет подключена после интеграции с ЮKassa.`);
+        navigate(`/checkout/success?plan=${planKey}&email=${encodeURIComponent(email)}`);
     };
 
     return (

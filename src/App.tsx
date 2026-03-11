@@ -5,6 +5,7 @@ import Home from './pages/home/Home.tsx';
 import Oferta from './pages/oferta/Oferta.tsx';
 import Privacy from './pages/privacy/Privacy.tsx';
 import Checkout from './pages/checkout/Checkout.tsx';
+import CheckoutSuccess from './pages/checkout/CheckoutSuccess.tsx';
 
 function ScrollToTop() {
     const {pathname} = useLocation();
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/oferta" element={<Oferta/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/checkout" element={<Checkout/>}/>
+                <Route path="/checkout/success" element={<CheckoutSuccess/>}/>
             </Routes>
         </BrowserRouter>
     )

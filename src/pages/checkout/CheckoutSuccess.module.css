@@ -1,0 +1,141 @@
+.page {
+    min-height: 100vh;
+    background: #f5f2f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 95px 40px 60px;
+    box-sizing: border-box;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border: 1px solid rgba(114, 73, 225, 0.3);
+    border-radius: 24px;
+    padding: 48px 32px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Icon */
+.icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px;
+}
+
+/* Title */
+.title {
+    font-family: "Jura", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 8px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: rgba(100, 85, 150, 1);
+    margin: 0 0 16px;
+}
+
+/* Email text */
+.emailText {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 32px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Button */
+.homeBtn {
+    display: inline-block;
+    padding: 14px 48px;
+    font-family: "Jura", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(69, 59, 108, 1), rgba(100, 85, 150, 1));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.homeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(69, 59, 108, 0.3);
+    background: linear-gradient(135deg, rgba(80, 70, 120, 1), rgba(110, 95, 160, 1));
+    color: #fff;
+}
+
+.homeBtn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 24px 40px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .content {
+        padding: 95px 20px 40px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 80px 16px 32px;
+    }
+
+    .card {
+        padding: 32px 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .emailText {
+        font-size: 14px;
+    }
+
+    .homeBtn {
+        font-size: 16px;
+        padding: 12px 40px;
+    }
+
+    .footer {
+        padding: 20px 16px;
+        font-size: 13px;
+    }
+}
