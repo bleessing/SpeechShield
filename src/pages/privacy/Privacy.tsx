@@ -16,6 +16,11 @@ const sections = [
     {id: 'changes', num: '11', title: 'Изменение Политики'},
     {id: 'contacts', num: '12', title: 'Контактная информация'},
 ];
+// const data = [
+//     {
+//         title:
+//     }
+// ]
 
 const Privacy = () => {
     return (
@@ -115,9 +120,9 @@ const Privacy = () => {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr >
                             <td className={styles.defTerm}>Персональные данные</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 Любая информация, относящаяся к прямо или косвенно определённому
                                 или определяемому физическому лицу (субъекту персональных данных)
                                 (ст. 3 ФЗ-152).
@@ -125,7 +130,7 @@ const Privacy = () => {
                         </tr>
                         <tr>
                             <td className={styles.defTerm}>Обработка</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 Любое действие с персональными данными: сбор, запись, систематизация,
                                 накопление, хранение, уточнение, извлечение, использование, передача,
                                 обезличивание, блокирование, удаление, уничтожение.
@@ -133,26 +138,26 @@ const Privacy = () => {
                         </tr>
                         <tr>
                             <td className={styles.defTerm}>Оператор</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 ООО «СПИЧШИЛДДЕВЕЛОПМЕНТ», самостоятельно организующее и осуществляющее
                                 обработку персональных данных.
                             </td>
                         </tr>
                         <tr>
                             <td className={styles.defTerm}>Субъект</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 Физическое лицо, персональные данные которого обрабатываются Оператором.
                             </td>
                         </tr>
                         <tr>
                             <td className={styles.defTerm}>Автоматизированная обработка</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 Обработка персональных данных с помощью средств вычислительной техники.
                             </td>
                         </tr>
                         <tr>
                             <td className={styles.defTerm}>Обезличивание</td>
-                            <td>
+                            <td className={styles.rightTerm}>
                                 Действия, в результате которых становится невозможным без использования
                                 дополнительной информации определить принадлежность данных конкретному
                                 Субъекту.
