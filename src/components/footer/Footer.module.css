@@ -5,8 +5,25 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(87, 51, 182, 1);
+    position: relative;
 }
-
+.section_wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 400px;
+    align-items: center;
+}
+.rightSide {
+    position: absolute;
+    top:20px;
+    display: flex;
+    right: 25%;
+}
+.additional{
+    position: absolute;
+    bottom: 10px;
+    left: 43%;
+}
 .container{
     max-width: 1360px;
     margin: 0 auto;
@@ -20,6 +37,7 @@
     flex-direction: column;
     gap: 50px;
     justify-content: center;
+    margin-top: 15px;
 
 }
 .additional{

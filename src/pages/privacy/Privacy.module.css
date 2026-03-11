@@ -5,39 +5,46 @@
 
 /* Header */
 .header {
-    max-width: 1360px;
+    position: sticky;
+    top: 0;
+    width: 1374px;
     margin: 0 auto;
+    left: 0;
+    right: 7px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 5px 15px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
 
 .logo {
-    height: 40px;
+    width: 186px;
+    height: 44px;
 }
 
 .homeLink {
     font-family: "Jura", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #fff;
+    color: rgba(69, 59, 108, 1);
     text-decoration: none;
-    background: linear-gradient(97.99deg, #7C56E3 12.72%, #42209E 100%);
-    padding: 10px 24px;
-    border-radius: 50px;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .homeLink:hover {
-    opacity: 0.85;
+    color: rgba(114, 73, 225, 1);
 }
 
 /* Main content */
 .content {
     max-width: 1360px;
     margin: 0 auto;
-    padding: 0 40px 60px;
+    padding: 95px 40px 60px;
 }
 
 /* Hero section */
@@ -362,17 +369,15 @@
 
 @media (max-width: 480px) {
     .header {
-        padding: 14px 16px;
+        width: calc(100% - 32px);
+        padding: 16px;
     }
 
     .logo {
-        height: 32px;
+        width: 140px;
+        height: auto;
     }
 
-    .homeLink {
-        font-size: 14px;
-        padding: 8px 18px;
-    }
 
     .content {
         padding: 0 16px 32px;

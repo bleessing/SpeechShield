@@ -11,6 +11,7 @@ const Footer = () => {
         { id: 2, title: "Преимущества", href: "#robot" },
         { id: 3, title: "Тарифы", href: "#payments" },
         { id: 4, title: "Поддержка", href: "#feedback" },
+
     ];
     return (
         <div className={styles.wrapper}>
@@ -48,13 +49,9 @@ const Footer = () => {
                         </div>
                         <p className={styles.additional}>© 2026 SpeechShield. Все права защищены.</p>
                     </>
-                ) : <>
-                    <div className={styles.leftSide}>
-                        <img src={logo}/>
-                        <p className={styles.additional}>© 2026 SpeechShield. Все права защищены.</p>
-                    </div>
-                    <div
-                        className={styles.reghtSide}>
+                ) : <div className={styles.section_wrapper}>
+                        <div
+                        className={styles.rightSide}>
                         <ul className={styles.menu_list}>
                             {items.map((item) => (
                                 <li key={item.id} className={styles.list_item}>
@@ -68,7 +65,14 @@ const Footer = () => {
                                 <Link to="/privacy">Конфиденциальность</Link>
                             </li>
                         </ul>
-                        <button className={styles.button}
+
+
+                    </div>
+                    <div className={styles.leftSide}>
+                        <img src={logo}/>
+
+                    </div>
+                    <button className={styles.button}
                                 onClick={() => {
                                     const link = document.createElement('a');
                                     link.href = 'https://fasie.ru/';
@@ -81,9 +85,8 @@ const Footer = () => {
                             </div>
                         </button>
 
-                    </div>
-                </>}
-
+                </div>}
+<p className={styles.additional}>© 2026 SpeechShield. Все права защищены.</p>
             </div>
         </div>
     );

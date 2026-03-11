@@ -1,33 +1,26 @@
-import { Link } from 'react-router-dom';
 import styles from './Privacy.module.css';
-import logo from '../../assets/logo.svg';
+
+import Header from "../../components/header/Header.tsx";
 
 const sections = [
-    { id: 'general', num: '01', title: 'Общие положения' },
-    { id: 'terms', num: '02', title: 'Основные понятия' },
-    { id: 'categories', num: '03', title: 'Категории обрабатываемых данных' },
-    { id: 'purposes', num: '04', title: 'Цели обработки' },
-    { id: 'legal', num: '05', title: 'Правовые основания обработки' },
-    { id: 'methods', num: '06', title: 'Способы и сроки обработки' },
-    { id: 'transfer', num: '07', title: 'Передача данных третьим лицам' },
-    { id: 'cookies', num: '08', title: 'Файлы cookie' },
-    { id: 'rights', num: '09', title: 'Права субъекта персональных данных' },
-    { id: 'security', num: '10', title: 'Меры по защите данных' },
-    { id: 'changes', num: '11', title: 'Изменение Политики' },
-    { id: 'contacts', num: '12', title: 'Контактная информация' },
+    {id: 'general', num: '01', title: 'Общие положения'},
+    {id: 'terms', num: '02', title: 'Основные понятия'},
+    {id: 'categories', num: '03', title: 'Категории обрабатываемых данных'},
+    {id: 'purposes', num: '04', title: 'Цели обработки'},
+    {id: 'legal', num: '05', title: 'Правовые основания обработки'},
+    {id: 'methods', num: '06', title: 'Способы и сроки обработки'},
+    {id: 'transfer', num: '07', title: 'Передача данных третьим лицам'},
+    {id: 'cookies', num: '08', title: 'Файлы cookie'},
+    {id: 'rights', num: '09', title: 'Права субъекта персональных данных'},
+    {id: 'security', num: '10', title: 'Меры по защите данных'},
+    {id: 'changes', num: '11', title: 'Изменение Политики'},
+    {id: 'contacts', num: '12', title: 'Контактная информация'},
 ];
 
 const Privacy = () => {
     return (
         <div className={styles.page}>
-            <header className={styles.header}>
-                <Link to="/">
-                    <img className={styles.logo} src={logo} alt="SpeechShield" />
-                </Link>
-                <Link to="/" className={styles.homeLink}>
-                    На главную
-                </Link>
-            </header>
+            <Header/>
 
             <main className={styles.content}>
                 <div className={styles.hero}>
@@ -116,55 +109,55 @@ const Privacy = () => {
                     </div>
                     <table className={styles.defTable}>
                         <thead>
-                            <tr>
-                                <th>Понятие</th>
-                                <th>Определение</th>
-                            </tr>
+                        <tr>
+                            <th>Понятие</th>
+                            <th>Определение</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className={styles.defTerm}>Персональные данные</td>
-                                <td>
-                                    Любая информация, относящаяся к прямо или косвенно определённому
-                                    или определяемому физическому лицу (субъекту персональных данных)
-                                    (ст. 3 ФЗ-152).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.defTerm}>Обработка</td>
-                                <td>
-                                    Любое действие с персональными данными: сбор, запись, систематизация,
-                                    накопление, хранение, уточнение, извлечение, использование, передача,
-                                    обезличивание, блокирование, удаление, уничтожение.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.defTerm}>Оператор</td>
-                                <td>
-                                    ООО «СПИЧШИЛДДЕВЕЛОПМЕНТ», самостоятельно организующее и осуществляющее
-                                    обработку персональных данных.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.defTerm}>Субъект</td>
-                                <td>
-                                    Физическое лицо, персональные данные которого обрабатываются Оператором.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.defTerm}>Автоматизированная обработка</td>
-                                <td>
-                                    Обработка персональных данных с помощью средств вычислительной техники.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.defTerm}>Обезличивание</td>
-                                <td>
-                                    Действия, в результате которых становится невозможным без использования
-                                    дополнительной информации определить принадлежность данных конкретному
-                                    Субъекту.
-                                </td>
-                            </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Персональные данные</td>
+                            <td>
+                                Любая информация, относящаяся к прямо или косвенно определённому
+                                или определяемому физическому лицу (субъекту персональных данных)
+                                (ст. 3 ФЗ-152).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Обработка</td>
+                            <td>
+                                Любое действие с персональными данными: сбор, запись, систематизация,
+                                накопление, хранение, уточнение, извлечение, использование, передача,
+                                обезличивание, блокирование, удаление, уничтожение.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Оператор</td>
+                            <td>
+                                ООО «СПИЧШИЛДДЕВЕЛОПМЕНТ», самостоятельно организующее и осуществляющее
+                                обработку персональных данных.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Субъект</td>
+                            <td>
+                                Физическое лицо, персональные данные которого обрабатываются Оператором.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Автоматизированная обработка</td>
+                            <td>
+                                Обработка персональных данных с помощью средств вычислительной техники.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles.defTerm}>Обезличивание</td>
+                            <td>
+                                Действия, в результате которых становится невозможным без использования
+                                дополнительной информации определить принадлежность данных конкретному
+                                Субъекту.
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </section>
@@ -195,7 +188,9 @@ const Privacy = () => {
                         <li className={styles.numberedItem}>Тип и версия операционной системы;</li>
                         <li className={styles.numberedItem}>Версия приложения SpeechShield;</li>
                         <li className={styles.numberedItem}>Данные файлов cookie и аналогичных технологий;</li>
-                        <li className={styles.numberedItem}>Статистика использования (время работы, объём обработанных данных).</li>
+                        <li className={styles.numberedItem}>Статистика использования (время работы, объём обработанных
+                            данных).
+                        </li>
                     </ol>
                     <p className={styles.sectionText}>
                         <strong>Платёжные данные:</strong>
@@ -571,7 +566,9 @@ const Privacy = () => {
                         </div>
                         <div className={styles.contactItem}>
                             <div className={styles.contactLabel}>Юридический адрес</div>
-                            <div className={styles.contactValue}>423465, Республика Татарстан, г. Альметьевск, ул. Белоглазова, д. 48, кв. 57</div>
+                            <div className={styles.contactValue}>423465, Республика Татарстан, г. Альметьевск, ул.
+                                Белоглазова, д. 48, кв. 57
+                            </div>
                         </div>
                         <div className={styles.contactItem}>
                             <div className={styles.contactLabel}>Электронная почта</div>

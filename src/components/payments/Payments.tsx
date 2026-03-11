@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './Payments.module.css'
 import ok from '../../assets/icons/Group.svg'
 import close from '../../assets/icons/close.svg'
@@ -23,6 +24,7 @@ interface Plan {
 }
 
 const Payments = () => {
+    const navigate = useNavigate();
     const plans: Plan[] = [
         {
             id: 1,
@@ -33,8 +35,8 @@ const Payments = () => {
             features: [
                 { id: 1, text: "Защита голоса в реальном времени", available: true },
                 { id: 2, text: "Работа с OBS Studio", available: true },
-                { id: 3, text: "Фильтрация Discord и игр", available: false },
-                { id: 4, text: "Очистка готовых видео", available: false },
+                { id: 3, text: "Обработка нескольких источников звука", available: false },
+                { id: 4, text: "Офлайн-обработка файлов", available: false },
                 { id: 5, text: "Статистика срабатываний", available: false },
             ],
             buttonText: "Скачать бесплатно",
@@ -57,13 +59,13 @@ const Payments = () => {
             features: [
                 { id: 1, text: "Защита голоса в реальном времени", available: true },
                 { id: 2, text: "Работа с OBS Studio", available: true },
-                { id: 3, text: "Фильтрация Discord и игр", available: true },
-                { id: 4, text: "Очистка видео (до 3 в месяц)", available: true },
+                { id: 3, text: "Обработка нескольких источников звука", available: true },
+                { id: 4, text: "Офлайн-обработка файлов (до 3 в месяц)", available: true },
                 { id: 5, text: "Статистика срабатываний", available: true },
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
-                window.open('https://t.me/speechShieldBot', '_blank');
+                navigate('/checkout?plan=standard');
             }
         },
         {
@@ -76,14 +78,12 @@ const Payments = () => {
             description: "Для профессионалов и студий",
             features: [
                 { id: 1, text: "Всё из тарифа Стандарт", available: true },
-                { id: 2, text: "Безлимитная очистка видео", available: true },
-                { id: 3, text: "Детальные отчёты и графики", available: true },
-                { id: 4, text: "Приоритетная поддержка 24/7", available: true },
-                { id: 5, text: "Ранний доступ к новинкам", available: true },
+                { id: 2, text: "Безлимитная офлайн-обработка файлов", available: true },
+                { id: 3, text: "Приоритетная поддержка", available: true },
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
-                window.open('https://t.me/speechShieldBot', '_blank');
+                navigate('/checkout?plan=pro');
             }
         }
     ];
