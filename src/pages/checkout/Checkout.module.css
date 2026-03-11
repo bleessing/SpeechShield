@@ -305,12 +305,8 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
-    .header {
-        padding: 16px 20px;
-    }
-
     .content {
-        padding: 0 20px 40px;
+        padding: 95px 20px 40px;
     }
 
     .title {
@@ -335,19 +331,8 @@
 }
 
 @media (max-width: 480px) {
-    .header {
-        width: calc(100% - 32px);
-        padding: 16px;
-    }
-
-    .logo {
-        width: 140px;
-        height: auto;
-    }
-
-
     .content {
-        padding: 0 16px 32px;
+        padding: 80px 16px 32px;
     }
 
     .hero {

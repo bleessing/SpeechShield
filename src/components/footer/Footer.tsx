@@ -47,7 +47,6 @@ const Footer = () => {
                                 </div>
                             </button>
                         </div>
-                        <p className={styles.additional}>© 2026 SpeechShield. Все права защищены.</p>
                     </>
                 ) : <div className={styles.section_wrapper}>
                         <div

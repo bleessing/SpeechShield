@@ -20,15 +20,16 @@
     right: 25%;
 }
 .additional{
-    position: absolute;
-    bottom: 10px;
-    left: 43%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
 }
 .container{
     max-width: 1360px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 35px 40px;
 }
@@ -120,7 +121,6 @@
 
     .additional {
         font-size: 13px;
-        text-align: center;
     }
 
     .card {
