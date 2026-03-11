@@ -115,7 +115,7 @@ const Checkout = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <span className={styles.inputHint}>На данную почту придёт код активации</span>
+                        <span className={styles.inputHint}></span>
                     </label>
 
                     <label className={styles.checkbox}>
