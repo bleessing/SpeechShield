@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
 import styles from './Reviews.module.css';
-import oneAv from '../../assets/avatars/31a1bed54d5a6d7080bf6f415ba8bd0407de09ea.jpg';
-import twoAv from '../../assets/avatars/b431380e45f5bfc53e2f1366a6eb63b952865aa6.jpg';
-import threeAv from '../../assets/avatars/d28e51a77ed396bd1a68cf27ad05ced376c8ba8b.jpg';
-import fourAv from '../../assets/avatars/fbb8532ed272017fa267924482614c10a5ce37ab.jpg';
+import oneAv from '../../assets/avatars/31a1bed54d5a6d7080bf6f415ba8bd0407de09ea.webp';
+import twoAv from '../../assets/avatars/b431380e45f5bfc53e2f1366a6eb63b952865aa6.webp';
+import threeAv from '../../assets/avatars/d28e51a77ed396bd1a68cf27ad05ced376c8ba8b.webp';
+import fourAv from '../../assets/avatars/fbb8532ed272017fa267924482614c10a5ce37ab.webp';
 import arrowPrev from '../../assets/icons/arrow_34.svg';
 
 const Reviews = () => {
@@ -134,7 +134,7 @@ const Reviews = () => {
                         <div className={styles.card} key={item.id}>
                             <p className={styles.card_text}>{item.text}</p>
                             <div className={styles.card_footer}>
-                                <img className={styles.avatar} src={item.avatar} alt={item.author} />
+                                <img className={styles.avatar} src={item.avatar} alt={item.author} loading="lazy" />
                                 <p className={styles.author}>{item.author}</p>
                             </div>
                         </div>
@@ -142,11 +142,11 @@ const Reviews = () => {
                 </div>
             </div>
             <div className={styles.pagination}>
-                <button className={styles.arrow_btn} onClick={handlePrev}>
-                    <img src={arrowPrev} className={styles.prev_arrow} alt="Previous" />
+                <button className={styles.arrow_btn} onClick={handlePrev} aria-label="Предыдущий отзыв">
+                    <img src={arrowPrev} className={styles.prev_arrow} alt="" aria-hidden="true" />
                 </button>
-                <button className={styles.arrow_btn} onClick={handleNext}>
-                    <img src={arrowPrev} className={styles.next_arrow} alt="Next" />
+                <button className={styles.arrow_btn} onClick={handleNext} aria-label="Следующий отзыв">
+                    <img src={arrowPrev} className={styles.next_arrow} alt="" aria-hidden="true" />
                 </button>
             </div>
         </div>

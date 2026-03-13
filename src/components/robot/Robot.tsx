@@ -6,7 +6,7 @@ import language from '../../assets/svg_icons/language.svg';
 import speaker from '../../assets/svg_icons/speaker.svg'
 
 import styles from './Robot.module.css'
-import robot from '../../assets/robot.png';
+import robot from '../../assets/robot.webp';
 
 const Robot = () => {
     const cardData = [
@@ -46,17 +46,17 @@ const Robot = () => {
     return (
 
             <div className={styles.container} id={'robot'}>
-                <h1 className={styles.title}>
+                <h2 className={styles.title}>
                     <strong>
                         Почему SpeechShield
                         <br/>
                     </strong>
                     — идеален для стримеров?
-                </h1>
+                </h2>
                 <div className={styles.sections}>
                     <div className={styles.section_wrapper}>
                     <div className={styles.section_left}>
-                        <img className={styles.section_img} src={robot} alt={'robotBanner'} />
+                        <img className={styles.section_img} src={robot} alt="SpeechShield — интерфейс программы" loading="lazy" />
                     </div>
                     </div>
                     <div className={styles.section_right}>
