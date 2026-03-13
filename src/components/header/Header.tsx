@@ -51,7 +51,13 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <button className={styles.burger} onClick={toggleMenu} aria-label="Меню">
+                <button
+                    className={styles.burger}
+                    onClick={toggleMenu}
+                    aria-label="Меню"
+                    aria-expanded={isMenuOpen}
+                    aria-controls="mobile-menu"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -59,7 +65,7 @@ const Header = () => {
             </div>
 
             {/* Мобильное меню */}
-            <div className={`${styles.mobile_menu} ${isMenuOpen ? styles.mobile_menu_open : ''}`}>
+            <div id="mobile-menu" className={`${styles.mobile_menu} ${isMenuOpen ? styles.mobile_menu_open : ''}`} aria-hidden={!isMenuOpen}>
                 <div className={styles.mobile_header}>
                     <Link to="/" className={styles.logo_link} onClick={closeMenu}>
                         <img className={styles.logo} src={logo} alt="SpeechShield" />

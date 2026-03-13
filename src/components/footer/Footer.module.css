@@ -1,7 +1,7 @@
 .wrapper{
     margin-left: calc(-50vw + 50%);
     width: 100vw;
-    background-image: url('../../assets/fBG.png');
+    background-image: url('../../assets/fBG.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(87, 51, 182, 1);

@@ -1,5 +1,5 @@
 import styles from './Banner.module.css'
-import banner from '../../assets/banner.png'
+import banner from '../../assets/banner.webp'
 import Header from "../header/Header.tsx";
 import useCheckMobileScreen from "../../hooks/useCheckMobile.ts";
 
@@ -19,7 +19,13 @@ const Banner = () => {
             <div className={styles.container}>
                 {isMobile ? (
                     <div className={styles.wrapper_mobile}>
-                        <img className={styles.banner_image_mobile} src={banner} alt="Баннер" />
+                        <img
+                            className={styles.banner_image_mobile}
+                            src={banner}
+                            alt="SpeechShield — умная защита стрима от запреток"
+                            fetchPriority="high"
+                            decoding="async"
+                        />
                         <div className={styles.glass_card}>
                             <h1 className={styles.banner_title}>
                                 <strong>SpeechShield</strong>&nbsp;&mdash; умная защита вашего стрима от&nbsp;запреток в&nbsp;реальном времени
@@ -46,7 +52,13 @@ const Banner = () => {
                             </button>
                         </div>
                         <div className={styles.container_right}>
-                            <img className={styles.banner_image} src={banner} alt="Баннер" />
+                            <img
+                                className={styles.banner_image}
+                                src={banner}
+                                alt="SpeechShield — умная защита стрима от запреток"
+                                fetchPriority="high"
+                                decoding="async"
+                            />
                         </div>
                     </div>
                 )}
