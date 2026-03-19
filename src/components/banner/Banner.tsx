@@ -8,7 +8,7 @@ const Banner = () => {
 
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = 'https://speechshield.ru/api/downloads/file';
+        link.href = 'https://api.speechshield.ru/downloads/file';
         link.download = '';
         link.click();
     };

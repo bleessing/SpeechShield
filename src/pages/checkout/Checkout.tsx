@@ -61,7 +61,7 @@ const Checkout = () => {
         setError('');
 
         try {
-            const res = await fetch('https://speechshield.ru/api/payments/create', {
+            const res = await fetch('https://api.speechshield.ru/payments/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

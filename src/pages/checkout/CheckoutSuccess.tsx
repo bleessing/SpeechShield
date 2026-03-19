@@ -36,7 +36,7 @@ const CheckoutSuccess = () => {
             pollCount++;
 
             try {
-                const res = await fetch(`https://speechshield.ru/api/payments/${paymentId}/status`);
+                const res = await fetch(`https://api.speechshield.ru/payments/${paymentId}/status`);
                 if (abortRef.current) return;
 
                 if (!res.ok) {

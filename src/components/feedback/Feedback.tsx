@@ -16,7 +16,7 @@ const Feedback = () => {
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         setIsSubmitting(true)
         try {
-            const response = await fetch('https://speechshield.ru/api/request', {
+            const response = await fetch('https://api.speechshield.ru/request', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

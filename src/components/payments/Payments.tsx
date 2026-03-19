@@ -42,7 +42,7 @@ const Payments = () => {
             buttonText: "Скачать бесплатно",
             buttonAction: () => {
                 const link = document.createElement('a');
-                link.href = 'https://speechshield.ru/api/downloads/file';
+                link.href = 'https://api.speechshield.ru/downloads/file';
                 link.download = '';
                 link.click();
             }
