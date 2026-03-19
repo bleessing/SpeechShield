@@ -14,7 +14,7 @@ const MAX_POLLS = 60; // 5 минут максимум
 const CheckoutSuccess = () => {
     const [status, setStatus] = useState<'loading' | 'succeeded' | 'pending' | 'canceled' | 'error'>('loading');
     const [planType, setPlanType] = useState('');
-    const [email, setEmail] = useState(() => {
+    const [email] = useState(() => {
         const params = new URLSearchParams(window.location.search);
         return params.get('email') || '';
     });
