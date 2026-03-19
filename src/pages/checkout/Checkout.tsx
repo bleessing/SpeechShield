@@ -1,5 +1,5 @@
 import {useState, useMemo} from 'react';
-import {Link, useSearchParams, useNavigate} from 'react-router-dom';
+import {Link, useSearchParams} from 'react-router-dom';
 import styles from './Checkout.module.css';
 import ok from '../../assets/icons/Group.svg';
 import Header from "../../components/header/Header.tsx";
@@ -41,7 +41,6 @@ const Checkout = () => {
     const planKey = searchParams.get('plan') || 'standard';
     const plan = plans[planKey] || plans.standard;
 
-    const navigate = useNavigate();
     const [isAnnual, setIsAnnual] = useState(false);
     const [email, setEmail] = useState('');
     const [ofertaChecked, setOfertaChecked] = useState(false);
@@ -50,12 +49,40 @@ const Checkout = () => {
     const price = isAnnual ? plan.annualPrice : plan.monthlyPrice;
     const periodLabel = isAnnual ? 'год' : 'месяц';
 
-    const isEmailValid = useMemo(() => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email), [email]);
-    const isFormValid = isEmailValid && ofertaChecked && privacyChecked;
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
 
-    const handleSubmit = () => {
+    const isEmailValid = useMemo(() => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email), [email]);
+    const isFormValid = isEmailValid && ofertaChecked && privacyChecked && !isLoading;
+
+    const handleSubmit = async () => {
         if (!isFormValid) return;
-        navigate(`/checkout/success?plan=${planKey}&email=${encodeURIComponent(email)}`);
+        setIsLoading(true);
+        setError('');
+
+        try {
+            const res = await fetch('https://speechshield.ru/api/payments/create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    plan_type: planKey,
+                    billing_period: isAnnual ? 'annual' : 'monthly',
+                    email
+                })
+            });
+
+            if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                throw new Error(err.detail || 'Ошибка при создании платежа');
+            }
+
+            const { confirmation_url, payment_id } = await res.json();
+            localStorage.setItem('payment_id', payment_id);
+            window.location.href = confirmation_url;
+        } catch (e: any) {
+            setError(e.message || 'Произошла ошибка. Попробуйте позже.');
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -142,12 +169,14 @@ const Checkout = () => {
                         </span>
                     </label>
 
+                    {error && <p className={styles.hint} style={{color: '#ef4444'}}>{error}</p>}
+
                     <button
                         className={styles.payBtn}
                         disabled={!isFormValid}
                         onClick={handleSubmit}
                     >
-                        Оплатить {price} ₽
+                        {isLoading ? 'Перенаправление...' : `Оплатить ${price} ₽`}
                     </button>
 
                     <p className={styles.hint}>
