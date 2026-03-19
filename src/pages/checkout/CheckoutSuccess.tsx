@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import styles from './CheckoutSuccess.module.css';
 import Header from "../../components/header/Header.tsx";
@@ -8,21 +8,37 @@ const planNames: Record<string, string> = {
     pro: 'Pro',
 };
 
+const POLL_INTERVAL = 5000;
+const MAX_POLLS = 60; // 5 минут максимум
+
 const CheckoutSuccess = () => {
     const [status, setStatus] = useState<'loading' | 'succeeded' | 'pending' | 'canceled' | 'error'>('loading');
     const [planType, setPlanType] = useState('');
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('email') || '';
+    });
+    const abortRef = useRef(false);
 
     useEffect(() => {
+        abortRef.current = false;
         const paymentId = localStorage.getItem('payment_id');
         if (!paymentId) {
             setStatus('error');
             return;
         }
 
+        let pollCount = 0;
+        let timeoutId: ReturnType<typeof setTimeout>;
+
         const checkStatus = async () => {
+            if (abortRef.current) return;
+            pollCount++;
+
             try {
                 const res = await fetch(`https://speechshield.ru/api/payments/${paymentId}/status`);
+                if (abortRef.current) return;
+
                 if (!res.ok) {
                     setStatus('error');
                     return;
@@ -30,35 +46,22 @@ const CheckoutSuccess = () => {
                 const data = await res.json();
                 setStatus(data.status);
                 setPlanType(data.plan_type || '');
+
+                // Продолжаем polling только если pending и не превысили лимит
+                if (data.status === 'pending' && pollCount < MAX_POLLS) {
+                    timeoutId = setTimeout(checkStatus, POLL_INTERVAL);
+                }
             } catch {
-                setStatus('error');
+                if (!abortRef.current) setStatus('error');
             }
         };
 
         checkStatus();
 
-        // Poll every 3 seconds if still pending
-        const interval = setInterval(async () => {
-            try {
-                const res = await fetch(`https://speechshield.ru/api/payments/${paymentId}/status`);
-                if (res.ok) {
-                    const data = await res.json();
-                    setStatus(data.status);
-                    setPlanType(data.plan_type || '');
-                    if (data.status !== 'pending') {
-                        clearInterval(interval);
-                    }
-                }
-            } catch { /* ignore */ }
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        // Try to get email from URL params (legacy) or just show generic message
-        const params = new URLSearchParams(window.location.search);
-        setEmail(params.get('email') || '');
+        return () => {
+            abortRef.current = true;
+            clearTimeout(timeoutId);
+        };
     }, []);
 
     const planName = planNames[planType] || planType;
