@@ -88,8 +88,8 @@
     display: none;
 }
 
-/* Мобильные - 480px и меньше */
-@media (max-width: 480px) {
+/* Мобильные */
+@media (max-width: 768px) {
     .header {
         width: calc(100% - 32px);
         padding: 16px;

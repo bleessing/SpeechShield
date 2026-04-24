@@ -89,8 +89,8 @@
     text-align: left;
 }
 
-/* Мобильные - 360px */
-@media (max-width: 480px) {
+/* Мобильные */
+@media (max-width: 768px) {
     .wrapper {
         margin-left: 0;
         width: 100%;

@@ -105,8 +105,8 @@
     color: rgba(69, 59, 108, 1);
 }
 
-/* Мобильные - 360px */
-@media (max-width: 480px) {
+/* Мобильные */
+@media (max-width: 768px) {
     .container {
         padding: 0 16px;
     }

@@ -9,7 +9,7 @@ const Advise = () => {
                     <h2 className={styles.container_title}>
                         Одна запретка
                         <br/>
-                        <strong> &mdash;&nbsp;и&nbsp; стрим под угрозой</strong></h2>
+                        <strong> &mdash;&nbsp;и&nbsp;стрим под угрозой</strong></h2>
                     <div className={styles.cards}>
                         <div className={styles.card} data-variant={'red'}>
                             <h2 className={styles.card_title}>Проблема</h2>
