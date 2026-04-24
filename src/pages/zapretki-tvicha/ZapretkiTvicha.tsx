@@ -43,7 +43,7 @@ const ZapretkiTvicha = () => {
         setMeta('keywords', 'запретки твича, запретка твич, запрещенные слова twitch, список запреток, бан на твиче, защита стрима');
         setMeta('og:title', 'Запретки Твича 2026 — полный список слов за бан', true);
         setMeta('og:description', 'Актуальная база запреток Twitch. Защитите канал от бана с SpeechShield.', true);
-        setMeta('og:image', 'https://speechshield.ru/og/zapretki-tvicha.png', true);
+        setMeta('og:image', 'https://speechshield.ru/og/zapretki-tvicha.jpg', true);
         setMeta('og:url', 'https://speechshield.ru/zapretki-tvicha', true);
         setMeta('og:type', 'article', true);
         setMeta('twitter:card', 'summary_large_image');
@@ -62,7 +62,7 @@ const ZapretkiTvicha = () => {
                 "@type": "Article",
                 "headline": "Все запретки Твича в 2026: полный список слов, за которые банят",
                 "description": "Актуальный список запреток Twitch 2026 по категориям. Узнайте, за какие слова банят стримеров.",
-                "image": "https://speechshield.ru/og/zapretki-tvicha.png",
+                "image": "https://speechshield.ru/og/zapretki-tvicha.jpg",
                 "author": {"@type": "Organization", "name": "SpeechShield", "url": "https://speechshield.ru"},
                 "publisher": {
                     "@type": "Organization",
