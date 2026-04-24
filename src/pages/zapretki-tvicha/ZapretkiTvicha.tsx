@@ -44,9 +44,14 @@ const ZapretkiTvicha = () => {
         setMeta('og:title', 'Запретки Твича 2026 — полный список слов за бан', true);
         setMeta('og:description', 'Актуальная база запреток Twitch. Защитите канал от бана с SpeechShield.', true);
         setMeta('og:image', 'https://speechshield.ru/og/zapretki-tvicha.jpg', true);
+        setMeta('og:image:type', 'image/jpeg', true);
+        setMeta('og:image:width', '1102', true);
+        setMeta('og:image:height', '630', true);
+        setMeta('og:image:alt', 'Запретки Твича 2026: защита стрима от бана с SpeechShield', true);
         setMeta('og:url', 'https://speechshield.ru/zapretki-tvicha', true);
         setMeta('og:type', 'article', true);
         setMeta('twitter:card', 'summary_large_image');
+        setMeta('twitter:image', 'https://speechshield.ru/og/zapretki-tvicha.jpg');
 
         let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
         if (!canonical) {
