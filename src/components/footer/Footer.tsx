@@ -33,6 +33,9 @@ const Footer = () => {
                                 <li className={styles.list_item}>
                                     <Link to="/privacy">Конфиденциальность</Link>
                                 </li>
+                                <li className={styles.list_item}>
+                                    <Link to="/zapretki-tvicha">Запретки Twitch</Link>
+                                </li>
                             </ul>
                             <button className={styles.button}
                                 onClick={() => {
@@ -62,6 +65,9 @@ const Footer = () => {
                             </li>
                             <li className={styles.list_item}>
                                 <Link to="/privacy">Конфиденциальность</Link>
+                            </li>
+                            <li className={styles.list_item}>
+                                <Link to="/zapretki-tvicha">Запретки Twitch</Link>
                             </li>
                         </ul>
 

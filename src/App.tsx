@@ -6,6 +6,7 @@ import Oferta from './pages/oferta/Oferta.tsx';
 import Privacy from './pages/privacy/Privacy.tsx';
 import Checkout from './pages/checkout/Checkout.tsx';
 import CheckoutSuccess from './pages/checkout/CheckoutSuccess.tsx';
+import ZapretkiTvicha from './pages/zapretki-tvicha/ZapretkiTvicha.tsx';
 
 function ScrollToTop() {
     const {pathname} = useLocation();
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/checkout" element={<Checkout/>}/>
                 <Route path="/checkout/success" element={<CheckoutSuccess/>}/>
+                <Route path="/zapretki-tvicha" element={<ZapretkiTvicha/>}/>
             </Routes>
         </BrowserRouter>
     )

@@ -1,0 +1,604 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    max-width: 820px;
+    margin: 100px auto 0;
+    padding: 0 20px 80px;
+    color: rgba(69, 59, 108, 1);
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs a {
+    color: rgba(114, 73, 225, 1);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb_sep {
+    color: rgba(69, 59, 108, 0.4);
+}
+
+/* Заголовки */
+.h1 {
+    font-family: "Jura", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 24px;
+}
+
+.h2 {
+    font-family: "Jura", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    margin: 56px 0 20px;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    margin: 0 0 8px;
+}
+
+/* Lead */
+.lead {
+    font-size: 19px;
+    line-height: 1.6;
+    color: rgba(69, 59, 108, 0.85);
+    margin: 0 0 16px;
+}
+
+.meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 40px;
+}
+
+/* Содержание */
+.toc {
+    background: rgba(231, 229, 254, 0.4);
+    border: 1px solid rgba(114, 73, 225, 0.2);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-bottom: 48px;
+}
+
+.toc_title {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: rgba(69, 59, 108, 1);
+}
+
+.toc_list {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.toc_list a {
+    color: rgba(114, 73, 225, 1);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.toc_list a:hover {
+    text-decoration: underline;
+}
+
+/* Секции */
+section {
+    margin-bottom: 16px;
+}
+
+section p {
+    margin: 0 0 16px;
+}
+
+/* Категории запреток */
+.category {
+    border: 1px solid rgba(114, 73, 225, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    background: rgba(245, 242, 245, 0.5);
+}
+
+.severity_badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.severity_badge[data-level="medium"] {
+    background: rgba(255, 193, 7, 0.15);
+    color: #b8860b;
+}
+
+.severity_badge[data-level="high"] {
+    background: rgba(255, 152, 0, 0.15);
+    color: #e65100;
+}
+
+.severity_badge[data-level="critical"] {
+    background: rgba(244, 67, 54, 0.12);
+    color: #c62828;
+}
+
+/* Details/Summary */
+.details {
+    margin-top: 12px;
+}
+
+.summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: rgba(114, 73, 225, 1);
+    font-size: 15px;
+    padding: 8px 0;
+    list-style: none;
+}
+
+.summary::before {
+    content: "▸ ";
+}
+
+.details[open] .summary::before {
+    content: "▾ ";
+}
+
+.summary::-webkit-details-marker {
+    display: none;
+}
+
+.word_list {
+    list-style: none;
+    padding: 12px 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.word_list li {
+    background: rgba(69, 59, 108, 0.07);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+.details_note {
+    font-size: 13px;
+    color: rgba(100, 85, 150, 1);
+    margin-top: 12px;
+}
+
+/* Статистика */
+.stats_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.stat_card {
+    text-align: center;
+    padding: 20px 12px;
+    border: 1px solid rgba(114, 73, 225, 0.2);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(231, 229, 254, 0.5) 0%, rgba(245, 242, 245, 1) 100%);
+}
+
+.stat_number {
+    display: block;
+    font-family: "Jura", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(114, 73, 225, 1);
+}
+
+.stat_label {
+    font-size: 13px;
+    color: rgba(100, 85, 150, 1);
+}
+
+/* Методы обнаружения */
+.method_card {
+    border-left: 3px solid rgba(114, 73, 225, 0.4);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background: rgba(245, 242, 245, 0.5);
+    border-radius: 0 12px 12px 0;
+}
+
+/* Санкции */
+.sanction_timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.sanction_step {
+    padding: 20px 24px;
+    border-radius: 16px;
+    border-left: 4px solid;
+}
+
+.sanction_step[data-level="low"] {
+    border-color: #ffc107;
+    background: rgba(255, 193, 7, 0.06);
+}
+
+.sanction_step[data-level="medium"] {
+    border-color: #ff9800;
+    background: rgba(255, 152, 0, 0.06);
+}
+
+.sanction_step[data-level="high"] {
+    border-color: #f44336;
+    background: rgba(244, 67, 54, 0.06);
+}
+
+.sanction_step[data-level="special"] {
+    border-color: rgba(114, 73, 225, 1);
+    background: rgba(114, 73, 225, 0.06);
+}
+
+.sanction_duration {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(100, 85, 150, 1);
+    margin: 0 0 8px;
+}
+
+.appeal_block {
+    background: rgba(231, 229, 254, 0.3);
+    border: 1px solid rgba(114, 73, 225, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+/* Способы защиты */
+.protection_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.protection_item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(114, 73, 225, 0.1);
+    background: rgba(245, 242, 245, 0.5);
+}
+
+.protection_highlight {
+    border: 2px solid rgba(114, 73, 225, 0.6);
+    background: linear-gradient(135deg, rgba(231, 229, 254, 0.4) 0%, rgba(245, 242, 245, 1) 100%);
+}
+
+.protection_number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(114, 73, 225, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* CTA секция */
+.cta_section {
+    background: linear-gradient(135deg, rgba(231, 229, 254, 0.5) 0%, rgba(245, 242, 245, 1) 100%);
+    border: 1px solid rgba(114, 73, 225, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    margin-top: 56px;
+    text-align: center;
+}
+
+.cta_section .h2 {
+    margin-top: 0;
+}
+
+.features_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+    text-align: left;
+}
+
+.feature_item {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(114, 73, 225, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.feature_item strong {
+    display: block;
+    font-family: "Jura", sans-serif;
+    font-size: 16px;
+    color: rgba(114, 73, 225, 1);
+    margin-bottom: 4px;
+}
+
+.feature_item p {
+    font-size: 14px;
+    margin: 0;
+    color: rgba(69, 59, 108, 0.8);
+}
+
+.cta_button {
+    background: linear-gradient(135deg, rgba(69, 59, 108, 1), rgba(100, 85, 150, 1));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(69, 59, 108, 0.3);
+}
+
+.cta_sub {
+    font-size: 14px;
+    color: rgba(100, 85, 150, 1);
+    margin-top: 12px;
+}
+
+/* Другие платформы */
+.platforms_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.platform_card {
+    padding: 20px;
+    border: 1px solid rgba(114, 73, 225, 0.15);
+    border-radius: 16px;
+    background: rgba(245, 242, 245, 0.5);
+}
+
+.platform_card strong {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.platform_card p {
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.coming_soon {
+    font-size: 12px;
+    color: rgba(114, 73, 225, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* FAQ */
+.faq_item {
+    border: 1px solid rgba(114, 73, 225, 0.12);
+    border-radius: 12px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.faq_question {
+    cursor: pointer;
+    padding: 16px 20px;
+    font-family: "Jura", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(69, 59, 108, 1);
+    list-style: none;
+}
+
+.faq_question::-webkit-details-marker {
+    display: none;
+}
+
+.faq_question::before {
+    content: "+ ";
+    color: rgba(114, 73, 225, 1);
+}
+
+.faq_item[open] .faq_question::before {
+    content: "− ";
+}
+
+.faq_answer {
+    padding: 0 20px 16px;
+    font-size: 15px;
+    margin: 0;
+    color: rgba(69, 59, 108, 0.85);
+}
+
+/* Финальный CTA */
+.final_cta {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(114, 73, 225, 0.1) 0%, rgba(231, 229, 254, 0.5) 100%);
+    border-radius: 24px;
+    margin-top: 56px;
+}
+
+.final_cta .h2 {
+    margin-top: 0;
+}
+
+.final_cta p {
+    color: rgba(100, 85, 150, 1);
+    margin-bottom: 24px;
+}
+
+.cta_button_large {
+    background: linear-gradient(97.99deg, #7C56E3 12.72%, #42209E 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta_button_large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(114, 73, 225, 0.4);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .article {
+        margin-top: 80px;
+        padding: 0 16px 60px;
+    }
+
+    .h1 {
+        font-size: 26px;
+    }
+
+    .h2 {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .h3 {
+        font-size: 18px;
+    }
+
+    .lead {
+        font-size: 16px;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .toc {
+        padding: 16px 20px;
+    }
+
+    .toc_list {
+        padding-left: 16px;
+    }
+
+    .stats_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat_number {
+        font-size: 28px;
+    }
+
+    .features_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platforms_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .protection_item {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cta_section {
+        padding: 24px 16px;
+    }
+
+    .final_cta {
+        padding: 40px 16px;
+    }
+
+    .cta_button_large {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .category {
+        padding: 16px;
+    }
+
+    .method_card {
+        padding: 12px 16px;
+    }
+
+    .sanction_step {
+        padding: 16px;
+    }
+
+    .appeal_block {
+        padding: 16px;
+    }
+
+    .word_list {
+        gap: 6px;
+    }
+
+    .word_list li {
+        font-size: 13px;
+        padding: 3px 10px;
+    }
+}
