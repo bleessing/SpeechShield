@@ -52,7 +52,7 @@ const HowItWorks = () => {
                 <div className={styles.grid}>
                     {/* Первый ряд */}
                     <div className={styles.row}>
-                    <h2 className={styles.title}>Как работает платформа?</h2>
+                    <h2 className={styles.title}>Как SpeechShield фильтрует запретки на стриме?</h2>
                         {steps1.map((step) => (
                             <div
                                 key={step.id}

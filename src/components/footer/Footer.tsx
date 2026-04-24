@@ -18,7 +18,7 @@ const Footer = () => {
             <div className={styles.container}>
                 {isMobile ? (
                     <>
-                        <img src={logo}/>
+                        <img src={logo} alt="SpeechShield логотип"/>
                         <div
                             className={styles.reghtSide}>
                             <ul className={styles.menu_list}>
@@ -43,7 +43,7 @@ const Footer = () => {
                                 }}>
                                 <div className={styles.card}>
                                     <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                    <img src={fsi}/>
+                                    <img src={fsi} alt="Фонд содействия инновациям"/>
                                 </div>
                             </button>
                         </div>
@@ -68,7 +68,7 @@ const Footer = () => {
 
                     </div>
                     <div className={styles.leftSide}>
-                        <img src={logo}/>
+                        <img src={logo} alt="SpeechShield логотип"/>
 
                     </div>
                     <button className={styles.button}
@@ -80,7 +80,7 @@ const Footer = () => {
                                 }}>
                             <div className={styles.card}>
                                 <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                <img src={fsi}/>
+                                <img src={fsi} alt="Фонд содействия инновациям"/>
                             </div>
                         </button>
 

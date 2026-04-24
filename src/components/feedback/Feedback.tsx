@@ -40,7 +40,7 @@ const Feedback = () => {
     return (
         <div id="feedback" className={styles.container}>
             <div className={styles.card}>
-                <h1 className={styles.card_title}>Поделитесь идеями и пожеланиями</h1>
+                <h2 className={styles.card_title}>Поделитесь идеями и пожеланиями</h2>
                 <p className={styles.card_short}>Помогите нам сделать программу удобнее <br/>
                     и полезнее — мы читаем каждое сообщение</p>
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

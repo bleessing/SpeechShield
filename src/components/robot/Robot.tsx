@@ -29,7 +29,7 @@ const Robot = () => {
         },  {
             id: 4,
             title: "Весь звук ПК",
-            short: "Фильтрация Discord, игр и музыки",
+            short: "Фильтрация Discord, игровых чатов и музыки",
             img: speaker
         },  {
             id: 5,
@@ -46,17 +46,17 @@ const Robot = () => {
     return (
 
             <div className={styles.container} id={'robot'}>
-                <h1 className={styles.title}>
+                <h2 className={styles.title}>
                     <strong>
                         Почему SpeechShield
                         <br/>
                     </strong>
-                    — идеален для стримеров?
-                </h1>
+                    — лучшее приложение для стримеров?
+                </h2>
                 <div className={styles.sections}>
                     <div className={styles.section_wrapper}>
                     <div className={styles.section_left}>
-                        <img className={styles.section_img} src={robot} alt={'robotBanner'} />
+                        <img className={styles.section_img} src={robot} alt="Преимущества SpeechShield для стримеров на Twitch и YouTube" />
                     </div>
                     </div>
                     <div className={styles.section_right}>

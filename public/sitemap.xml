@@ -3,30 +3,30 @@
 
   <url>
     <loc>https://speechshield.ru/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://speechshield.ru/#how-it-works</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://speechshield.ru/checkout</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://speechshield.ru/#payments</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://speechshield.ru/oferta</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://speechshield.ru/#feedback</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://speechshield.ru/privacy</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

@@ -91,8 +91,8 @@ const Payments = () => {
     return (
         <div id="payments" className={styles.wrapper}>
             <div className={styles.container}>
-                <h2 className={styles.title}>Выберите подходящий тариф</h2>
-                <p className={styles.subtitle}>Начните бесплатно, обновитесь когда будете готовы</p>
+                <h2 className={styles.title}>Тарифы SpeechShield для стримеров</h2>
+                <p className={styles.subtitle}>Начните бесплатно — обновитесь, когда будете готовы</p>
 
                 <div className={styles.cards_container}>
                     {plans.map((plan) => (

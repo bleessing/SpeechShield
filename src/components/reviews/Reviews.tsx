@@ -111,7 +111,7 @@ const Reviews = () => {
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.title}>Отзывы пользователей о <strong>SpeechShield</strong></h2>
+            <h2 className={styles.title}>Отзывы стримеров о <strong>SpeechShield</strong></h2>
             <div
                 className={`${styles.carousel_wrapper} ${isDragging ? styles.dragging : ''}`}
                 onMouseDown={handleMouseDown}

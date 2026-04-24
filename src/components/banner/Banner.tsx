@@ -19,13 +19,13 @@ const Banner = () => {
             <div className={styles.container}>
                 {isMobile ? (
                     <div className={styles.wrapper_mobile}>
-                        <img className={styles.banner_image_mobile} src={banner} alt="Баннер" />
+                        <img className={styles.banner_image_mobile} src={banner} alt="SpeechShield — приложение для защиты стрима от запреток" />
                         <div className={styles.glass_card}>
                             <h1 className={styles.banner_title}>
-                                <strong>SpeechShield</strong>&nbsp;&mdash; умная защита вашего стрима от&nbsp;запреток в&nbsp;реальном времени
+                                <strong>SpeechShield</strong>&nbsp;&mdash; защита стрима от&nbsp;запреток в&nbsp;реальном времени
                             </h1>
                             <p className={styles.banner_description}>
-                                Автоматически фильтрует ненормативную лексику во&nbsp;время стрима и&nbsp;защищает ваш канал от&nbsp;блокировок
+                                Приложение для Windows, которое автоматически заглушает мат на&nbsp;стриме через OBS. Защитите канал на&nbsp;Twitch и&nbsp;YouTube от&nbsp;бана
                             </p>
                             <button className={styles.button} onClick={handleDownload}>
                                 Попробовать бесплатно
@@ -36,17 +36,17 @@ const Banner = () => {
                     <div className={styles.wrapper}>
                         <div className={styles.container_left}>
                             <h1 className={styles.banner_title}>
-                                <strong>SpeechShield</strong>&nbsp;&mdash; умная защита вашего стрима от&nbsp;запреток в&nbsp;реальном времени
+                                <strong>SpeechShield</strong>&nbsp;&mdash; защита стрима от&nbsp;запреток в&nbsp;реальном времени
                             </h1>
                             <p className={styles.banner_description}>
-                                Автоматически фильтрует ненормативную лексику во&nbsp;время стрима и&nbsp;защищает ваш канал от&nbsp;блокировок
+                                Приложение для Windows, которое автоматически заглушает мат на&nbsp;стриме через OBS. Защитите канал на&nbsp;Twitch и&nbsp;YouTube от&nbsp;бана
                             </p>
                             <button className={styles.button} onClick={handleDownload}>
                                 Попробовать бесплатно
                             </button>
                         </div>
                         <div className={styles.container_right}>
-                            <img className={styles.banner_image} src={banner} alt="Баннер" />
+                            <img className={styles.banner_image} src={banner} alt="SpeechShield — приложение для защиты стрима от запреток" />
                         </div>
                     </div>
                 )}
