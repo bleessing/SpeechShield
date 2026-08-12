@@ -42,7 +42,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                             <div className={styles.card}>
-                                <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
+                                <h3 className={styles.card_title}>Проект реализован при поддержке</h3>
                                 <div className={styles.logos}>
                                     <a href="https://fasie.ru/" target="_blank" rel="noopener noreferrer">
                                         <img src={fsi} alt="Фонд содействия инновациям"/>
@@ -81,7 +81,7 @@ const Footer = () => {
 
                     </div>
                     <div className={styles.card}>
-                            <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
+                            <h3 className={styles.card_title}>Проект реализован при поддержке</h3>
                             <div className={styles.logos}>
                                 <a href="https://fasie.ru/" target="_blank" rel="noopener noreferrer">
                                     <img src={fsi} alt="Фонд содействия инновациям"/>
