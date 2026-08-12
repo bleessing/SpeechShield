@@ -41,21 +41,17 @@ const Footer = () => {
                                     <Link to="/instrukciya">Инструкция</Link>
                                 </li>
                             </ul>
-                            <button className={styles.button}
-                                onClick={() => {
-                                    const link = document.createElement('a');
-                                    link.href = 'https://fasie.ru/';
-                                    link.target = '_blank';
-                                    link.click();
-                                }}>
-                                <div className={styles.card}>
-                                    <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                    <div className={styles.logos}>
+                            <div className={styles.card}>
+                                <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
+                                <div className={styles.logos}>
+                                    <a href="https://fasie.ru/" target="_blank" rel="noopener noreferrer">
                                         <img src={fsi} alt="Фонд содействия инновациям"/>
+                                    </a>
+                                    <a href="https://univertechpred.ru/" target="_blank" rel="noopener noreferrer">
                                         <img className={styles.utp} src={utp} alt="Платформа университетского технологического предпринимательства"/>
-                                    </div>
+                                    </a>
                                 </div>
-                            </button>
+                            </div>
                         </div>
                     </>
                 ) : <div className={styles.section_wrapper}>
@@ -84,21 +80,17 @@ const Footer = () => {
                         <img src={logo} alt="SpeechShield логотип"/>
 
                     </div>
-                    <button className={styles.button}
-                                onClick={() => {
-                                    const link = document.createElement('a');
-                                    link.href = 'https://fasie.ru/';
-                                    link.target = '_blank';
-                                    link.click();
-                                }}>
-                            <div className={styles.card}>
-                                <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                <div className={styles.logos}>
+                    <div className={styles.card}>
+                            <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
+                            <div className={styles.logos}>
+                                <a href="https://fasie.ru/" target="_blank" rel="noopener noreferrer">
                                     <img src={fsi} alt="Фонд содействия инновациям"/>
+                                </a>
+                                <a href="https://univertechpred.ru/" target="_blank" rel="noopener noreferrer">
                                     <img className={styles.utp} src={utp} alt="Платформа университетского технологического предпринимательства"/>
-                                </div>
+                                </a>
                             </div>
-                        </button>
+                        </div>
 
                 </div>}
 <p className={styles.additional}>© 2026 SpeechShield. Все права защищены.</p>
