@@ -80,6 +80,21 @@
     text-decoration: none;
 }
 
+.logos{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.utp{
+    height: 56px;
+    width: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
 .button {
     background: none;
     border: none;
@@ -130,5 +145,12 @@
     }
     .card_title{
         text-decoration: none   ;
+    }
+    .logos{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .utp{
+        height: 44px;
     }
 }

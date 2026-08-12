@@ -50,6 +50,9 @@ const Header = () => {
                             </a>
                         </li>
                     ))}
+                    <li className={styles.list_item}>
+                        <Link to="/instrukciya">Инструкция</Link>
+                    </li>
                 </ul>
                 <button className={styles.burger} onClick={toggleMenu} aria-label="Меню">
                     <span></span>
@@ -78,6 +81,9 @@ const Header = () => {
                             </a>
                         </li>
                     ))}
+                    <li className={styles.mobile_list_item}>
+                        <Link to="/instrukciya" onClick={closeMenu}>Инструкция</Link>
+                    </li>
                 </ul>
             </div>
         </>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logo from '../../assets/svg_icons/logo (2).svg'
 import fsi from '../../assets/svg_icons/image.svg';
+import utp from '../../assets/svg_icons/platforma-utp.png';
 import useCheckMobileScreen from "../../hooks/useCheckMobile.ts";
 
 const Footer = () => {
@@ -36,6 +37,9 @@ const Footer = () => {
                                 <li className={styles.list_item}>
                                     <Link to="/zapretki-tvicha">Запретки Twitch</Link>
                                 </li>
+                                <li className={styles.list_item}>
+                                    <Link to="/instrukciya">Инструкция</Link>
+                                </li>
                             </ul>
                             <button className={styles.button}
                                 onClick={() => {
@@ -46,7 +50,10 @@ const Footer = () => {
                                 }}>
                                 <div className={styles.card}>
                                     <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                    <img src={fsi} alt="Фонд содействия инновациям"/>
+                                    <div className={styles.logos}>
+                                        <img src={fsi} alt="Фонд содействия инновациям"/>
+                                        <img className={styles.utp} src={utp} alt="Платформа университетского технологического предпринимательства"/>
+                                    </div>
                                 </div>
                             </button>
                         </div>
@@ -86,7 +93,10 @@ const Footer = () => {
                                 }}>
                             <div className={styles.card}>
                                 <h3 className={styles.card_title}>Платформа разработана при поддержке</h3>
-                                <img src={fsi} alt="Фонд содействия инновациям"/>
+                                <div className={styles.logos}>
+                                    <img src={fsi} alt="Фонд содействия инновациям"/>
+                                    <img className={styles.utp} src={utp} alt="Платформа университетского технологического предпринимательства"/>
+                                </div>
                             </div>
                         </button>
 
