@@ -2,11 +2,13 @@ import styles from './Banner.module.css'
 import banner from '../../assets/banner.png'
 import Header from "../header/Header.tsx";
 import useCheckMobileScreen from "../../hooks/useCheckMobile.ts";
+import {sendGoal} from '../../utils/metrika.ts';
 
 const Banner = () => {
     const { isMobile } = useCheckMobileScreen();
 
     const handleDownload = () => {
+        sendGoal('banner_cta_download');
         const link = document.createElement('a');
         link.href = 'https://api.speechshield.ru/downloads/file';
         link.download = '';

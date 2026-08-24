@@ -3,18 +3,7 @@ import {Link} from 'react-router-dom';
 import Header from '../../components/header/Header.tsx';
 import Footer from '../../components/footer/Footer.tsx';
 import styles from './ZapretkiTvicha.module.css';
-
-declare global {
-    interface Window {
-        ym?: (id: number, method: string, target: string) => void;
-    }
-}
-
-const YM_ID = 102179873;
-
-const sendGoal = (target: string) => {
-    if (window.ym) window.ym(YM_ID, 'reachGoal', target);
-};
+import {sendGoal} from '../../utils/metrika.ts';
 
 const handleDownload = () => {
     sendGoal('zapretki_cta_download');
@@ -759,7 +748,7 @@ const ZapretkiTvicha = () => {
                             и&nbsp;автоматически заглушает запретки до&nbsp;попадания в&nbsp;эфир. База
                             содержит 90+&nbsp;слов и&nbsp;70+&nbsp;regex-паттернов, покрывающих все
                             морфологические формы. Зрители слышат тишину вместо запретки&nbsp;&mdash;
-                            бан невозможен.
+                            риск бана сводится к&nbsp;минимуму.
                         </p>
                     </details>
                 </section>

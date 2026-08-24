@@ -3,6 +3,8 @@ import {Link, useSearchParams} from 'react-router-dom';
 import styles from './Checkout.module.css';
 import ok from '../../assets/icons/Group.svg';
 import Header from "../../components/header/Header.tsx";
+import {sendGoal} from '../../utils/metrika.ts';
+import {useNoindex} from '../../utils/seo.ts';
 
 interface PlanData {
     name: string;
@@ -37,6 +39,7 @@ const plans: Record<string, PlanData> = {
 };
 
 const Checkout = () => {
+    useNoindex();
     const [searchParams] = useSearchParams();
     const planKey = searchParams.get('plan') || 'standard';
     const plan = plans[planKey] || plans.standard;
@@ -57,6 +60,7 @@ const Checkout = () => {
 
     const handleSubmit = async () => {
         if (!isFormValid) return;
+        sendGoal(`checkout_submit_${planKey}`);
         setIsLoading(true);
         setError('');
 
@@ -78,6 +82,7 @@ const Checkout = () => {
 
             const { confirmation_url, payment_id } = await res.json();
             localStorage.setItem('payment_id', payment_id);
+            sendGoal('checkout_payment_created');
             window.location.href = confirmation_url;
         } catch (e: any) {
             setError(e.message || 'Произошла ошибка. Попробуйте позже.');

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import styles from './Payments.module.css'
 import ok from '../../assets/icons/Group.svg'
 import close from '../../assets/icons/close.svg'
+import {sendGoal} from '../../utils/metrika.ts'
 
 interface Feature {
     id: number;
@@ -41,6 +42,7 @@ const Payments = () => {
             ],
             buttonText: "Скачать бесплатно",
             buttonAction: () => {
+                sendGoal('payments_free_download');
                 const link = document.createElement('a');
                 link.href = 'https://api.speechshield.ru/downloads/file';
                 link.download = '';
@@ -65,6 +67,7 @@ const Payments = () => {
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
+                sendGoal('payments_subscribe_standard');
                 navigate('/checkout?plan=standard');
             }
         },
@@ -83,6 +86,7 @@ const Payments = () => {
             ],
             buttonText: "Оформить подписку",
             buttonAction: () => {
+                sendGoal('payments_subscribe_pro');
                 navigate('/checkout?plan=pro');
             }
         }

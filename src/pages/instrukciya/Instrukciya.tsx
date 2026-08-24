@@ -3,18 +3,7 @@ import {Link} from 'react-router-dom';
 import Header from '../../components/header/Header.tsx';
 import Footer from '../../components/footer/Footer.tsx';
 import styles from './Instrukciya.module.css';
-
-declare global {
-    interface Window {
-        ym?: (id: number, method: string, target: string) => void;
-    }
-}
-
-const YM_ID = 102179873;
-
-const sendGoal = (target: string) => {
-    if (window.ym) window.ym(YM_ID, 'reachGoal', target);
-};
+import {sendGoal} from '../../utils/metrika.ts';
 
 const handleDownload = () => {
     sendGoal('instrukciya_cta_download');

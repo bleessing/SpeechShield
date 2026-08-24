@@ -2,6 +2,8 @@ import {useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import styles from './CheckoutSuccess.module.css';
 import Header from "../../components/header/Header.tsx";
+import {sendGoal} from '../../utils/metrika.ts';
+import {useNoindex} from '../../utils/seo.ts';
 
 const planNames: Record<string, string> = {
     standard: 'Стандарт',
@@ -12,6 +14,7 @@ const POLL_INTERVAL = 5000;
 const MAX_POLLS = 60; // 5 минут максимум
 
 const CheckoutSuccess = () => {
+    useNoindex();
     const [status, setStatus] = useState<'loading' | 'succeeded' | 'pending' | 'canceled' | 'error'>('loading');
     const [planType, setPlanType] = useState('');
     const [email] = useState(() => {
@@ -19,10 +22,14 @@ const CheckoutSuccess = () => {
         return params.get('email') || '';
     });
     const abortRef = useRef(false);
+    const goalSentRef = useRef(false);
 
     useEffect(() => {
         abortRef.current = false;
-        const paymentId = localStorage.getItem('payment_id');
+        // payment_id берём из query-параметра возврата ЮKassa (работает в любом браузере),
+        // localStorage — как fallback для старых ссылок
+        const params = new URLSearchParams(window.location.search);
+        const paymentId = params.get('payment_id') || localStorage.getItem('payment_id');
         if (!paymentId) {
             setStatus('error');
             return;
@@ -46,6 +53,11 @@ const CheckoutSuccess = () => {
                 const data = await res.json();
                 setStatus(data.status);
                 setPlanType(data.plan_type || '');
+
+                if (data.status === 'succeeded' && !goalSentRef.current) {
+                    goalSentRef.current = true;
+                    sendGoal('payment_success');
+                }
 
                 // Продолжаем polling только если pending и не превысили лимит
                 if (data.status === 'pending' && pollCount < MAX_POLLS) {

@@ -1,13 +1,15 @@
 import './App.css'
 import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
-import {useEffect} from 'react';
+import {lazy, Suspense, useEffect} from 'react';
 import Home from './pages/home/Home.tsx';
-import Oferta from './pages/oferta/Oferta.tsx';
-import Privacy from './pages/privacy/Privacy.tsx';
-import Checkout from './pages/checkout/Checkout.tsx';
-import CheckoutSuccess from './pages/checkout/CheckoutSuccess.tsx';
-import ZapretkiTvicha from './pages/zapretki-tvicha/ZapretkiTvicha.tsx';
-import Instrukciya from './pages/instrukciya/Instrukciya.tsx';
+
+// Тяжёлые текстовые страницы грузим отдельными чанками — они не нужны посетителю главной
+const Oferta = lazy(() => import('./pages/oferta/Oferta.tsx'));
+const Privacy = lazy(() => import('./pages/privacy/Privacy.tsx'));
+const Checkout = lazy(() => import('./pages/checkout/Checkout.tsx'));
+const CheckoutSuccess = lazy(() => import('./pages/checkout/CheckoutSuccess.tsx'));
+const ZapretkiTvicha = lazy(() => import('./pages/zapretki-tvicha/ZapretkiTvicha.tsx'));
+const Instrukciya = lazy(() => import('./pages/instrukciya/Instrukciya.tsx'));
 
 function ScrollToTop() {
     const {pathname} = useLocation();
@@ -21,15 +23,17 @@ function App() {
     return (
         <BrowserRouter>
             <ScrollToTop/>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/oferta" element={<Oferta/>}/>
-                <Route path="/privacy" element={<Privacy/>}/>
-                <Route path="/checkout" element={<Checkout/>}/>
-                <Route path="/checkout/success" element={<CheckoutSuccess/>}/>
-                <Route path="/zapretki-tvicha" element={<ZapretkiTvicha/>}/>
-                <Route path="/instrukciya" element={<Instrukciya/>}/>
-            </Routes>
+            <Suspense fallback={null}>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/oferta" element={<Oferta/>}/>
+                    <Route path="/privacy" element={<Privacy/>}/>
+                    <Route path="/checkout" element={<Checkout/>}/>
+                    <Route path="/checkout/success" element={<CheckoutSuccess/>}/>
+                    <Route path="/zapretki-tvicha" element={<ZapretkiTvicha/>}/>
+                    <Route path="/instrukciya" element={<Instrukciya/>}/>
+                </Routes>
+            </Suspense>
         </BrowserRouter>
     )
 }
