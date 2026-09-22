@@ -256,9 +256,21 @@ section p {
     font-size: 16px;
 }
 
-.principle_emoji {
-    font-size: 28px;
+.principle_icon {
     flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(114, 73, 225, 0.12);
+    color: rgba(114, 73, 225, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principle_icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 /* Таблица маршрутизации */

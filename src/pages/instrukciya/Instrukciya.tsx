@@ -192,15 +192,31 @@ const Instrukciya = () => {
                     <p>Принцип простой:</p>
                     <div className={styles.principle}>
                         <div className={styles.principle_item}>
-                            <span className={styles.principle_emoji}>🎤</span>
+                            <span className={styles.principle_icon} aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    <path d="M12 19v3"/>
+                                </svg>
+                            </span>
                             <span>Программа слышит ваш голос</span>
                         </div>
                         <div className={styles.principle_item}>
-                            <span className={styles.principle_emoji}>🧠</span>
+                            <span className={styles.principle_icon} aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/>
+                                    <path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/>
+                                </svg>
+                            </span>
                             <span>Узнаёт запрещённое слово</span>
                         </div>
                         <div className={styles.principle_item}>
-                            <span className={styles.principle_emoji}>🔇</span>
+                            <span className={styles.principle_icon} aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5Z"/>
+                                    <path d="m22 9-6 6"/><path d="m16 9 6 6"/>
+                                </svg>
+                            </span>
                             <span>Заглушает его — в эфир уходит чистая речь, а вы в наушниках слышите всё как есть</span>
                         </div>
                     </div>
